@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Adminisatration de la Serre de Goarem An Abat</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Adminisatration de la Serre de Goarem An Abat</a>
+            </div>
+            <!-- /.navbar-header -->
+            <ul class="nav navbar-top-links navbar-right">
+                <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                </li>
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        
+                        <li>
+                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="flot.html"><i class="fa fa-bar-chart-o fa-fw"></i> Charts</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+            <div class="center">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Dashboard</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-3 col-md-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                               <!--svg test -->
+                               <div id="svg">
+                                    <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        width="100%" viewBox="0 0 960 560" style="enable-background:new 0 0 960 560;" xml:space="preserve">
+                                        <path style="fill:none;stroke:#333333;stroke-width:15;stroke-miterlimit:10;" d="M31.5,24v419c-0.139,95.622,30.13,91.5,125.5,91.5h664c80.95,0.026,112.042,0.026,107.5-92.5V23"/>
+                                        <path style="fill:#33CCFF;" d="M911.526,436.826c0,0-0.041,18.51-1.144,29.468c-3.391,33.673-18.58,43.146-42.568,43.553c-23.988,0.407-715.105-0.166-766.506-0.009C55.731,509.976,51,473.404,51,473.404v-36.531L911.526,436.826z"/>
+                                        <rect id="waterimg" x="51" y="89" style="fill:#33CCFF;" width="861" height="348"/>
+                                    </svg>
+                                </div>
+                            <span class="pull-right"><h3 id="watertext">niveau d'eau</h3></span>    
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                               <!--svg test -->
+                               <div id="svg">
+                                <svg version="1.1" id="ph" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     width="100%" viewBox="0 0 960 560" style="enable-background:new 0 0 960 560;" xml:space="preserve">
+                                <path style="fill:none;stroke:#333333;stroke-width:15;stroke-miterlimit:10;" d="M31.5,24"/>
+                                <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="10.5" y1="280" x2="949.5" y2="280">
+                                    <stop  offset="0" style="stop-color:#CC0000"/>
+                                    <stop  offset="0.4069" style="stop-color:#FF9500"/>
+                                    <stop  offset="0.542" style="stop-color:#FDC515"/>
+                                    <stop  offset="0.7838" style="stop-color:#076300"/>
+                                    <stop  offset="0.9684" style="stop-color:#000066"/>
+                                </linearGradient>
+                                <path style="fill:url(#SVGID_1_);" d="M929.459,356.5H30.541c-11.068,0-20.041-8.973-20.041-20.041V223.541
+                                    c0-11.068,8.973-20.041,20.041-20.041h898.918c11.068,0,20.041,8.973,20.041,20.041v112.918
+                                    C949.5,347.527,940.527,356.5,929.459,356.5z"/>
+                                <line id="phimg" x1="500" y1="180" x2="500" y2="380" stroke="#FF0000" stroke-width="40" stroke-linecap="round" stroke-opacity="0.7" />
+                                </svg>
+                               </div>
+                              <span class="pull-right"><h3 id="phtext">Ph</h3></span>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                               <!--svg test -->
+                               <div id="svg">
+                                <svg version="1.1" id="luminosite" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="100%" viewBox="0 0 960 560" style="enable-background:new 0 0 960 560;" xml:space="preserve">
+<path style="fill:none;stroke:#333333;stroke-width:15;stroke-miterlimit:10;" d="M31.5,24"/>
+<path style="fill:#FFFF66;" d="M493.862,139.624c-66.18,0-119.863,43.258-119.863,96.633c0,17.567,6.113,33.905,15.978,48.236
+    c29.431,42.758,37.241,66.758,42.056,89.987c4.023,19.47,9.587,23.994,27.833,23.994c7.782,0,20.465,0,33.996,0
+    c13.56,0,26.271,0,34.003,0c18.282,0,23.853-4.524,27.869-23.994c4.829-23.241,12.633-47.247,42.056-89.987
+    c9.901-14.325,15.978-30.663,15.978-48.236C613.789,182.876,560.106,139.624,493.862,139.624z"/>
+<path style="fill:#999999;" d="M536.753,405.47h-85.689c-3.567,0-6.441,2.311-6.441,5.174v3.461c0,2.851,2.875,5.174,6.441,5.174
+    h85.689c3.517,0,6.398-2.322,6.398-5.174v-3.461C543.165,407.781,540.27,405.47,536.753,405.47z"/>
+<path style="fill:#999999;" d="M536.753,426.182h-85.689c-3.567,0-6.441,2.299-6.441,5.174v3.461c0,2.851,2.875,5.162,6.441,5.162
+    h85.689c3.517,0,6.398-2.311,6.398-5.162v-3.461C543.165,428.487,540.27,426.182,536.753,426.182z"/>
+<path style="fill:#999999;" d="M536.753,446.9h-85.689c-3.567,0-6.441,2.311-6.441,5.174v3.461c0,2.863,2.875,5.174,6.441,5.174
+    h85.689c3.517,0,6.398-2.311,6.398-5.174v-3.461C543.165,449.211,540.27,446.9,536.753,446.9z"/>
+<path style="fill:#999999;" d="M461.764,467.612h64.29c0,10.353-17.162,17.257-32.191,17.257
+    C478.904,484.869,461.764,477.965,461.764,467.612z"/>
+<line style="fill:none;stroke:#FFFF66;stroke-width:17;stroke-miterlimit:10;" x1="401" y1="359" x2="360" y2="390"/>
+<line style="fill:none;stroke:#FFFF66;stroke-width:17;stroke-miterlimit:10;" x1="360" y1="279.263" x2="269" y2="310"/>
+<line style="fill:none;stroke:#FFFF66;stroke-width:17;stroke-miterlimit:10;" x1="390" y1="145" x2="328" y2="59"/>
+<line style="fill:none;stroke:#FFFF66;stroke-width:17;stroke-miterlimit:10;" x1="352" y1="201" x2="254" y2="163"/>
+<line style="fill:none;stroke:#FFFF66;stroke-width:17;stroke-miterlimit:10;" x1="493.884" y1="115" x2="493.884" y2="16"/>
+<line style="fill:none;stroke:#FFFF66;stroke-width:17;stroke-miterlimit:10;" x1="588" y1="145" x2="643" y2="59"/>
+<line style="fill:none;stroke:#FFFF66;stroke-width:17;stroke-miterlimit:10;" x1="631" y1="201" x2="731" y2="163"/>
+<line style="fill:none;stroke:#FFFF66;stroke-width:17;stroke-miterlimit:10;" x1="624" y1="280" x2="724" y2="294.632"/>
+<line style="fill:none;stroke:#FFFF66;stroke-width:17;stroke-miterlimit:10;" x1="584" y1="359" x2="624" y2="374.5"/>
+</svg>
+                               </div>
+                              <span class="pull-right"><h3 id="lumitext">luminosité</h3></span>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                               <!--svg test -->
+                               <div id="svg">
+                                <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     width="100%" viewBox="0 0 960 560" style="enable-background:new 0 0 960 560;" xml:space="preserve">
+                                <path style="fill:#CC0000;" d="M494.385,155h-38.77C449.2,155,444,160.2,444,166.615v252.77C444,425.8,449.2,431,455.615,431h38.77
+                                    C500.8,431,506,425.8,506,419.385v-252.77C506,160.2,500.8,155,494.385,155z"/>
+                                <path style="fill:none;stroke:#333333;stroke-width:15;stroke-miterlimit:10;" d="M31.5,24"/>
+                                <path style="fill:none;stroke:#666666;stroke-width:9;stroke-miterlimit:10;" d="M429.461,406.209V79.141
+                                    c0-27.546,19.724-49.877,44.055-49.877h0.89c24.331,0,44.055,22.331,44.055,49.877v327.068C603,506,348,507,429.461,406.209z"/>
+                                <line style="fill:none;stroke:#666666;stroke-width:4;stroke-miterlimit:10;" x1="516.5" y1="79" x2="487" y2="79"/>
+                                <line style="fill:none;stroke:#666666;stroke-width:4;stroke-miterlimit:10;" x1="516.5" y1="186" x2="487" y2="186"/>
+                                <line style="fill:none;stroke:#666666;stroke-width:4;stroke-miterlimit:10;" x1="516.5" y1="281" x2="487" y2="281"/>
+                                <line style="fill:none;stroke:#666666;stroke-width:4;stroke-miterlimit:10;" x1="516.5" y1="375" x2="487" y2="375"/>
+                                <ellipse style="fill:#CC0000;" cx="476.215" cy="440.5" rx="50.392" ry="29.5"/>
+                                </svg>
+                               </div>
+                              <span class="pull-right"><h3 id="tempeautext">température de l'eau</h3></span>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                               <!--svg test -->
+                               <div id="svg">
+                                <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     width="100%" viewBox="0 0 960 560" style="enable-background:new 0 0 960 560;" xml:space="preserve">
+                                <path style="fill:#CC0000;" d="M494.385,155h-38.77C449.2,155,444,160.2,444,166.615v252.77C444,425.8,449.2,431,455.615,431h38.77
+                                    C500.8,431,506,425.8,506,419.385v-252.77C506,160.2,500.8,155,494.385,155z"/>
+                                <path style="fill:none;stroke:#333333;stroke-width:15;stroke-miterlimit:10;" d="M31.5,24"/>
+                                <path style="fill:none;stroke:#666666;stroke-width:9;stroke-miterlimit:10;" d="M429.461,406.209V79.141
+                                    c0-27.546,19.724-49.877,44.055-49.877h0.89c24.331,0,44.055,22.331,44.055,49.877v327.068C603,506,348,507,429.461,406.209z"/>
+                                <line style="fill:none;stroke:#666666;stroke-width:4;stroke-miterlimit:10;" x1="516.5" y1="79" x2="487" y2="79"/>
+                                <line style="fill:none;stroke:#666666;stroke-width:4;stroke-miterlimit:10;" x1="516.5" y1="186" x2="487" y2="186"/>
+                                <line style="fill:none;stroke:#666666;stroke-width:4;stroke-miterlimit:10;" x1="516.5" y1="281" x2="487" y2="281"/>
+                                <line style="fill:none;stroke:#666666;stroke-width:4;stroke-miterlimit:10;" x1="516.5" y1="375" x2="487" y2="375"/>
+                                <ellipse style="fill:#CC0000;" cx="476.215" cy="440.5" rx="50.392" ry="29.5"/>
+                                </svg>
+                               </div>
+                              <span class="pull-right"><h3 id="tempairtext">température de l'air</h3></span>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                               <!--svg test -->
+                               <div id="svg">
+                                <svg id="profondeur" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                width="100%" viewBox="0 0 960 560" style="enable-background:new 0 0 960 560;" xml:space="preserve">
+
+
+                                </svg>
+                               </div>
+                              <span class="pull-right"><h3 id="humitext">humidité</h3></span>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                               <!--svg test -->
+                               <div id="svg">
+                                <svg id="profondeur" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                width="100%" viewBox="0 0 960 560" style="enable-background:new 0 0 960 560;" xml:space="preserve">
+                                
+                                </svg>
+                               </div>
+                              <span class="pull-right"><h3 id="salitext">salinité</h3></span>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                </div>
+                <div class="row">
+                    
+                    <div class="col-lg-12">
+                        <h1 class="page-header">See Also</h1>
+                    </div>
+                    <div class="col-lg-12">
+                    
+                    <!-- /.panel -->
+                    
+                    <!-- /.panel -->
+                    <div class="chat-panel panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-comments fa-fw"></i> Chat
+                            <div class="btn-group pull-right">
+                                <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-chevron-down"></i>
+                                </button>
+                                <ul class="dropdown-menu slidedown">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-refresh fa-fw"></i> Refresh
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-check-circle fa-fw"></i> Available
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-times fa-fw"></i> Busy
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-clock-o fa-fw"></i> Away
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-sign-out fa-fw"></i> Sign Out
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <ul class="chat">
+                                <li class="left clearfix">
+                                    <span class="chat-img pull-left">
+                                        <img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar" class="img-circle" />
+                                    </span>
+                                    <div class="chat-body clearfix">
+                                        <div class="header">
+                                            <strong class="primary-font">Jack Sparrow</strong>
+                                            <small class="pull-right text-muted">
+                                                <i class="fa fa-clock-o fa-fw"></i> 12 mins ago
+                                            </small>
+                                        </div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="right clearfix">
+                                    <span class="chat-img pull-right">
+                                        <img src="http://placehold.it/50/FA6F57/fff" alt="User Avatar" class="img-circle" />
+                                    </span>
+                                    <div class="chat-body clearfix">
+                                        <div class="header">
+                                            <small class=" text-muted">
+                                                <i class="fa fa-clock-o fa-fw"></i> 13 mins ago</small>
+                                            <strong class="pull-right primary-font">Bhaumik Patel</strong>
+                                        </div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="left clearfix">
+                                    <span class="chat-img pull-left">
+                                        <img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar" class="img-circle" />
+                                    </span>
+                                    <div class="chat-body clearfix">
+                                        <div class="header">
+                                            <strong class="primary-font">Jack Sparrow</strong>
+                                            <small class="pull-right text-muted">
+                                                <i class="fa fa-clock-o fa-fw"></i> 14 mins ago</small>
+                                        </div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="right clearfix">
+                                    <span class="chat-img pull-right">
+                                        <img src="http://placehold.it/50/FA6F57/fff" alt="User Avatar" class="img-circle" />
+                                    </span>
+                                    <div class="chat-body clearfix">
+                                        <div class="header">
+                                            <small class=" text-muted">
+                                                <i class="fa fa-clock-o fa-fw"></i> 15 mins ago</small>
+                                            <strong class="pull-right primary-font">Bhaumik Patel</strong>
+                                        </div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.panel-body -->
+                        <div class="panel-footer">
+                            <div class="input-group">
+                                <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-warning btn-sm" id="btn-chat">
+                                        Send
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- /.panel-footer -->
+                    </div>
+                    <!-- /.panel .chat-panel -->
+                </div>
+                </div>
+                <!-- /.col-lg-4 -->
+            </div>
+            <!-- /.row -->
+            
+                        </div>
+                        <!-- /.panel-heading -->
+                       
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+  
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+    <script src="../js/test.js"></script>
+
+
+</body>
+
+</html>
