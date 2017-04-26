@@ -84,7 +84,7 @@ function validateJSON(jsonText)
 function doItOnInterval(nb_capteur)
 {
   var http = createRequestObject();
-  http.open('GET', '../lecture.php', true);
+  http.open('GET', '../../bdd/lecture.php', true);
   http.onreadystatechange = (function ()
     {
       if (http.readyState == 4)
