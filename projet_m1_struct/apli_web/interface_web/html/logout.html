@@ -8,15 +8,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    <meta name="google-signin-client_id" content="465233672387-jbdsr1eunamue0fq0pq1cl3db8l87o8i.apps.googleusercontent.com">
     <title>logout</title>
     </head>
 
 <body>
-    <script>
-  
-  // This is called with the results from from FB.getLoginStatus().
-  function statusChangeCallback(response) {
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+  function onLoad() {
+      gapi.load('auth2', function() {
+        gapi.auth2.init();
+      });
+    }
+
+</script>
+<a href="#" onclick="signOut();">Sign out</a>
+<!-- log out fb user-->
+<!-- init fb api-->
+<script>
+   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
     // The response object is returned with a status field that lets the
@@ -25,14 +40,10 @@
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
-      FB.logout(function(response) {
-   document.location.href="login.html";
-	});
-
+      testAPI();
     } else {
       // The person is not logged into your app or we are unable to tell.
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into this app.';
+      //
     }
   }
 
@@ -84,16 +95,17 @@
   // Here we run a very simple test of the Graph API after login is
   // successful.  See statusChangeCallback() for when this call is made.
   function testAPI() {
-    console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me', function(response) {
-      console.log('Successful login for: ' + response.name);
-      document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
+    console.log('goodbye ');
+    FB.logout(function(response) {
+   // Person is now logged out
     });
-    
+    //document.location.href="login.html"
   }
   
-  </script>
+</script>
+<!-- fin init-->
+<!-- log out fb user-->
+<script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
 
   </body>
 
