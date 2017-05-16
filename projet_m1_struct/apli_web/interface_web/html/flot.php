@@ -46,7 +46,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" id ="grostitre" href="index.html">Goarem: données</a>
+                <a class="navbar-brand"  href="index.html">Goarem: données</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -61,7 +61,7 @@
                     <ul class="nav" id="side-menu">
                         
                         <li>
-                            <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="tableau.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
                             <a href="flot.php"><i class="fa fa-bar-chart-o fa-fw"></i> Charts</a>

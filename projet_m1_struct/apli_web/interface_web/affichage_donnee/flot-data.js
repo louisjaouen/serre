@@ -58,7 +58,7 @@ function doItOnInterval()
 //Call the ajax refresh each seconds
 
 doItOnInterval();
-setInterval("doItOnInterval()", 100);
+setInterval("doItOnInterval()", 1000);
 $(function() {
    
 
