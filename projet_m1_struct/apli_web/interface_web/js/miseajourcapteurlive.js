@@ -88,5 +88,5 @@ function doItOnInterval(nb_capteur)
 //Call the ajax refresh each seconds
 
 doItOnInterval(7);
-setInterval("doItOnInterval(7)", 100);
+setInterval("doItOnInterval(7)", 1000);
 

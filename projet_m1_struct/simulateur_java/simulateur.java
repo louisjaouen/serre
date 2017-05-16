@@ -22,7 +22,7 @@ class simulateur extends Thread{
 		String test="null";
 		while ( ligne != test ){
 			try{
-				Thread.sleep(10);
+				Thread.sleep(900);
 			}catch(InterruptedException ie){
 
 			}

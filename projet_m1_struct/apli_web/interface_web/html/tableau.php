@@ -31,7 +31,7 @@
 
 </head>
 <body>
-
+	<script src="../js/miseajourcapteurlive.js"></script>
 
   
     <div id="wrapper">
@@ -281,7 +281,7 @@
     <script src="../js/sb-admin-2.js"></script>
 
     <!-- Custom script -->
-    <script src="../js/miseajourcapteurlive.js"></script>
+    
 
 
 </body>
