@@ -1,67 +1,8 @@
-//Flot Line Chart
-$(document).ready(function() {
-
-    var offset = 0;
-    plot();
-    
-
-    //Call the ajax refresh each seconds
-
-    
-
-
-    function plot() {
-        var sin = [],
-            cos = [];
-        /*for (var i = 0; i < 12; i += 0.2) {
-            
-        }*/
-
-        var options = {
-            series: {
-                lines: {
-                    show: true
-                },
-                points: {
-                    show: true
-                }
-
-            },
-            grid: {
-                hoverable: true //IMPORTANT! this is needed for tooltip to work
-            },
-            yaxis: {
-                min: -1.2,
-                max: 1.2
-            },
-            tooltip: true,
-            tooltipOpts: {
-                content: "'%s' of %x.1 is %y.4",
-                shifts: {
-                    x: -60,
-                    y: 25
-                }
-            }
-        };
-
-        var plotObj = $.plot($("#flot-line-chart"), [{
-                data: sin,
-                label: "sin(x)"
-            }, {
-                data: cos,
-                label: "cos(x)"
-            }],
-            options);
-    }
-});
-
-doItOnInterval(50);
-setInterval("doItOnInterval(50)", 10000);
-//Flot Line Chart
-
-
+//Flot Moving Line Chart
+var y=0;
+var i=0;
 function createRequestObject()
-{
+    {
     var http;
     if (window.XMLHttpRequest)
     { // Mozilla, Konqueror/Safari, IE7 ...
@@ -81,10 +22,10 @@ function validateJSON(jsonText)
 } // validateJSON(jsonText)
 
 
-function doItOnInterval(nb_capteur)
+function doItOnInterval()
 {
   var http = createRequestObject();
-  http.open('GET', '../../bdd/lecture.php', true);
+  http.open('GET', '../../bdd/lecture_donnees_capteur_eau_test.php', true);
   http.onreadystatechange = (function ()
     {
       if (http.readyState == 4)
@@ -94,81 +35,10 @@ function doItOnInterval(nb_capteur)
           var donnees_capteur = validateJSON(http.responseText);
           if (donnees_capteur !== false)
           {
-            var str = '';
-            for(var i=0;i<nb_capteur;i++){
-                var num_capteur=i;
-                var donnee = [];
-                var randomize = 100;
-                donnee[i] = donnees_capteur[num_capteur];
-                $(document).ready(function() {
-
-    var offset = 14;
-
-    plot();
-
-    function plot() {
-
-
-        var temperature = [];
-        //remplir nos vecteurs avec les bonnes valeurs bdd
-        /*for (var i = 0; i < 12; i += 0.2) {
-            temperature.push([i, 4*Math.sin(i)+offset]);
-        }*/
-        
-        temperature.push(donnee.valeur);
-        temperature.push(donnee.valeur);
-        temperature.push(donnee.valeur);
-        temperature.push(donnee.valeur);
-        temperature.push(donnee.valeur);
-        temperature.push(donnee.valeur);
-        temperature.push(donnee.valeur);
-        temperature.push([11, 4*Math.random(7)+offset]);
-        temperature.push([11.1, 4*Math.random(5)+offset]);
-        temperature.push([11.3, 4*Math.random(9)+offset]);
-        temperature.push([11.5, 4*Math.random(2)+offset]);
-        temperature.push([12, 4*Math.random(6)+offset]);
-        temperature.push([25.2, 4*Math.random(1)+offset]);
-
-
-        var options = {
-            series: {
-                lines: {
-                    show: true
-                },
-                points: {
-                    show: false
-                },
-                color: "rgba(0, 0, 255, 1)"
-
-            },
-            grid: {
-                hoverable: true //IMPORTANT! this is needed for tooltip to work
-            },
-            yaxis: {
-                min: -20,
-                max: 50
-            },
-            tooltip: true,
-            tooltipOpts: {
-                content: "'%s' of %x.1 is %y.4",
-                shifts: {
-                    x: -60,
-                    y: 25
-                }
-            }
-
-        };
-
-        var plotObj = $.plot($("#flot-test-chart"), [{
-                data: temperature,
-                label: "temperature(x)"
-                
-            }],
-            options);
-    }
-});
-            }
+            var donnee = donnees_capteur[0];
             
+            y = donnee.valeur;
+                
           }
           else
           {
@@ -185,6 +55,111 @@ function doItOnInterval(nb_capteur)
     
 }
 
+//Call the ajax refresh each seconds
+
+doItOnInterval();
+setInterval("doItOnInterval()", 100);
+$(function() {
+   
+
+
+    var container = $("#flot-line-chart");
+
+    // Determine how many data points to keep based on the placeholder's initial size;
+    // this gives us a nice high-res plot while avoiding more than one point per pixel.
+
+    var maximum = container.outerWidth() / 2 || 300;
+
+    //
+
+    var data = [];
+    
+    function getData() {
+
+        if (data.length) {
+            data = data.slice(1);
+        }
+
+        while (data.length < maximum) {
+            var previous = data.length ? data[data.length - 1] : 50;
+            
+            
+            
+            data.push(y < 0 ? 0 : y > 100 ? 100 : y);
+        }
+
+        // zip the generated y values with the x values
+
+        var res = [];
+        for (var i = 0; i < data.length; ++i) {
+            res.push([i, data[i]])
+        }
+
+        return res;
+    }
+
+    //
+
+    series = [{
+        data: getData(),
+        lines: {
+            fill: true
+        }
+    }];
+
+    //
+
+    var plot = $.plot(container, series, {
+        grid: {
+            borderWidth: 1,
+            minBorderMargin: 20,
+            labelMargin: 10,
+            backgroundColor: {
+                colors: ["#fff", "#e4f4f4"]
+            },
+            margin: {
+                top: 8,
+                bottom: 20,
+                left: 20
+            },
+            markings: function(axes) {
+                var markings = [];
+                var xaxis = axes.xaxis;
+                for (var x = Math.floor(xaxis.min); x < xaxis.max; x += xaxis.tickSize * 2) {
+                    markings.push({
+                        xaxis: {
+                            from: x,
+                            to: x + xaxis.tickSize
+                        },
+                        color: "rgba(232, 232, 255, 0.2)"
+                    });
+                }
+                return markings;
+            }
+        },
+        xaxis: {
+            tickFormatter: function() {
+                return "";
+            }
+        },
+        yaxis: {
+            min: 0,
+            max: 110
+        },
+        legend: {
+            show: true
+        }
+    });
+
+    // Update the random dataset at 25FPS for a smoothly-animating chart
+
+    setInterval(function updateRandom() {
+        series[0].data = getData();
+        plot.setData(series);
+        plot.draw();
+    }, 10);
+
+});
 
 
 //Flot Pie Chart
@@ -198,7 +173,7 @@ $(function() {
         data: 3
     }, {
         label: "Series 2",
-        data: 9
+        data: 30
     }, {
         label: "Series 3",
         data: 20
