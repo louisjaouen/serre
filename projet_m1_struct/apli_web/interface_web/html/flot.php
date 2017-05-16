@@ -33,6 +33,8 @@
 
 <body>
 
+
+
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -44,12 +46,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
+                <a class="navbar-brand" id ="grostitre" href="index.html">Goarem: données</a>
             </div>
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right">
-                <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                <li><a href="login.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                 </li>
             </ul>
             <!-- /.navbar-top-links -->
@@ -59,10 +61,10 @@
                     <ul class="nav" id="side-menu">
                         
                         <li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="flot.html"><i class="fa fa-bar-chart-o fa-fw"></i> Charts</a>
+                            <a href="flot.php"><i class="fa fa-bar-chart-o fa-fw"></i> Charts</a>
                         </li>
                     </ul>
                 </div>
@@ -80,21 +82,7 @@
             </div>
             <!-- /.row -->
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            My Example
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div class="flot-chart">
-                                <div class="flot-chart-content" id="flot-test-chart"></div>
-                            </div>
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
+                
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
