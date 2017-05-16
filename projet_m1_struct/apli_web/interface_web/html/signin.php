@@ -26,42 +26,37 @@
             <div class="col-md-4 col-md-offset-4">
                 <div class="login-panel panel panel-default">
                     <div class="panel-heading">
-                        <h2 class="title"><a href="signin.html" >Sign in </a></h2> <h5>Or <a href="login.html">Log in </a></h5>
+                        <h2 class="title"><a href="signin.html" >Inscription</a></h2> <h5>si vous avez déjà un compte connectez vous <a href="login.php">connexion</a></h5>
                     </div>
                     <div class="panel-body">
-                        <div id="my-signin2"></div>
-                        <script>
-                          function onSuccess(googleUser) {
-                            console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-                          }
-                          function onFailure(error) {
-                            console.log(error);
-                          }
-                          function renderButton() {
-                            gapi.signin2.render('my-signin2', {
-                              'scope': 'profile email',
-                              'width': 200,
-                              'height': 50,
-                              'longtitle': true,
-                              'theme': 'dark',
-                              'onsuccess': onSuccess,
-                              'onfailure': onFailure
-                            });
-                          }
-                        </script>
-
-                        <h2>Or</h2>
+                        <div id="my-signin" href="index.html"></div>
+                        <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true" href="index.html"></div>
+                        <h6>connectez vous vous avec :</h6>
+                        <a href="../securite/Google.php" title="Connexion Google">Google</a>
+                        <a href="../securite/Facebook.php" title="Connexion Facebook">Facebook</a>
+                        <a href="../securite/Twitter.php" title="Connexion Twitter">Twitter</a>
+                        <h2>ou</h2>
                         <form role="form">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                                    <input class="form-control" placeholder="Nom" name="nom" type="name" autofocus>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                    <input class="form-control" placeholder="Prénom" name="prenom" type="name" >
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="E-mail" name="email" type="email" >
+                                </div>
+                                
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="mot de passe" name="motdepasse" type="password" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="téléphone" name="telephone" type="phone" value="">
                                 </div>
                                 
                                 <!-- Change this to a button or input when using this as a form -->
-                                <a href="index.html" class="btn btn-lg btn-success btn-block">Login</a>
+                                <a href="index.html" class="btn btn-lg btn-success btn-block">Inscription</a>
                             </fieldset>
                             
                         </form>
