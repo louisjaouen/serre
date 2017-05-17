@@ -21,8 +21,16 @@
     <link href="../css/sb-admin-2.css" rel="stylesheet">
 </head>
 
-<body>   
-    
+<body> 
+
+    <?php 
+        //Include Composer's autoloader
+        include 'vendor/autoload.php';
+
+        //Import Hybridauth's namespace
+        use Hybridauth\Hybridauth; 
+    ?>  
+            
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
                 <div class="login-panel panel panel-default">
