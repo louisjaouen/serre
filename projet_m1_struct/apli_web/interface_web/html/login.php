@@ -22,51 +22,7 @@
 </head>
 
 <body> 
-
-    <?php 
-        //Include Composer's autoloader
-        include 'vendor/autoload.php';
-
-        //Import Hybridauth's namespace
-        use Hybridauth\Hybridauth; 
-        //Build configuration array
-        $config = [
-            //Location where to redirect users once they authenticate with Facebook
-            //For this example we choose to come back to this same script
-            'callback' => '92.92.96.14:80/serre/projet_m1_struct/apli_web/interface_web/html/login.php',
-
-            //Facebook application credentials
-            'keys' => [
-                'id'     => '446272929039156', //Required: your Facebook application id
-                'secret' => '0ec9951958695a404f7ea0b458ab5f83'  //Required: your Facebook application secret 
-            ]
-        ];
-
-        try {
-            //Instantiate Facebook's adapter directly
-            $adapter = new Hybridauth\Provider\Facebook($config);
-
-            //Attempt to authenticate the user with Facebook
-            $adapter->authenticate();
-
-            //Returns a boolean of whether the user is connected with Facebook
-            $isConnected = $adapter->isConnected();
-         
-            //Retrieve the user's profile
-            $userProfile = $adapter->getUserProfile();
-
-            //Inspect profile's public attributes
-            var_dump($userProfile);
-
-            //Disconnect the adapter 
-            $adapter->disconnect();
-        }
-        catch(\Exception $e){
-            echo 'Oops, we ran into an issue! ' . $e->getMessage();
-        }
-
-    ?>  
-            
+   
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
                 <div class="login-panel panel panel-default">
