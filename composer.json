@@ -1,5 +1,11 @@
 {
+<<<<<<< HEAD
+    "require" : {
+        "hybridauth/hybridauth" : "~3.0"
+    }
+=======
 	"require" : {
 		"hybridauth/hybridauth" : "v3.0.0-beta.1"
 	}
+>>>>>>> f133dec8bb9402a50aa76f954eb1a45f45e6a090
 }
