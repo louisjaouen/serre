@@ -4,8 +4,8 @@ if(isset($_REQUEST["provider"]))
 {
    
    //On appelle la librairie
-   $config = $_SERVER['DOCUMENT_ROOT']."/hybridauth/config.php";
-   require_once( $_SERVER['DOCUMENT_ROOT']."/hybridauth/Hybrid/Auth.php" );
+   $config = "/var/www/html/serre/vendor/hybridauth/hybridauth/hybridauth/Hybrid/config.php";
+   require_once("/var/www/html/serre/vendor/hybridauth/hybridauth/hybridauth/Hybrid/Auth.php" );
    //Initialisation
    try{$hybridauth = new Hybrid_Auth( $config );
       //On  affecte le provider
