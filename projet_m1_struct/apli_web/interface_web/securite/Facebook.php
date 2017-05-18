@@ -1,60 +1,79 @@
-<?php
-	session_start();
-	$config_file_path = 'config.php';
-	 
-	require_once( "../../../vendor/hybridauth/hybridauth/Hybrid/Auth.php" );
-	try{
-		// create an instance for Hybridauth with the configuration file path as parameter
-	  	$hybridauth = new Hybrid_Auth( $config );
-	 
-	  	// try to authenticate the user with twitter,
-	  	// user will be redirected to Twitter for authentication,
-	  	// if he already did, then Hybridauth will ignore this step and return an instance of the adapter
-	  	$twitter = $hybridauth->authenticate( "Twitter" );
-	 
-	  	// get the user profile
-	  	$twitter_user_profile = $twitter->getUserProfile();
-	 
-	  	echo "Ohai there! U are connected with: <b>{$twitter->id}</b><br />";
-	  	echo "As: <b>{$twitter_user_profile->displayName}</b><br />";
-	  	echo "And your provider user identifier is: <b>{$twitter_user_profile->identifier}</b><br />";
-	 
-	  	// debug the user profile
-	  	print_r( $twitter_user_profile );
-	 
-	  	// exp of using the twitter social api: Returns settings for the authenticating user.
-	  	$account_settings = $twitter->api()->get( 'account/settings.json' );
-	 
-	  	// print recived settings
-	  	echo "Your account settings on Twitter: " . print_r( $account_settings, true );
-	 
-	  	// disconnect the user ONLY form twitter
-	  	// this will not disconnect the user from others providers if any used nor from your application
-	  	echo "Logging out..";
-	  	$twitter->logout();
-	}
-	catch( Exception $e ){
-	  	// Display the recived error,
-	  	// to know more please refer to Exceptions handling section on the userguide
-		switch( $e->getCode() ){
-	  	  case 0 : echo "Unspecified error."; break;
-	  	  case 1 : echo "Hybriauth configuration error."; break;
-	  	  case 2 : echo "Provider not properly configured."; break;
-	  	  case 3 : echo "Unknown or disabled provider."; break;
-	  	  case 4 : echo "Missing provider application credentials."; break;
-	  	  case 5 : echo "Authentification failed. "
-	  	              . "The user has canceled the authentication or the provider refused the connection.";
-	  	           break;
-	  	  case 6 : echo "User profile request failed. Most likely the user is not connected "
-	  	              . "to the provider and he should authenticate again.";
-	  	           $twitter->logout();
-	  	           break;
-	  	  case 7 : echo "User not connected to the provider.";
-	  	           $twitter->logout();
-	  	           break;
-	  	  case 8 : echo "Provider does not support this feature."; break;
-	  	}
-	 
-	  	// well, basically your should not display this to the end user, just give him a hint and move on..
-	  	echo "<br /><br /><b>Original error message:</b> " . $e->getMessage();
-	}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+ 
+    <title>login</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/sb-admin-2.css" rel="stylesheet">
+</head>
+
+<body> 
+   
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="login-panel panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="title"><a href="login.php" >connexion </a></h2> <h5>Si vous n'avez pas de compte, inscrivez vous <a href="signin.php">Inscription</a></h5>
+                    </div>
+                    <div class="panel-body">
+                        <div id="my-signin" href="index.html"></div>
+                        <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true" href="index.html"></div>
+                        <h6>connectez vous avec :</h6>
+                        <a href="/login.php?provider=Google" title="Connexion Google">Google</a>
+                        <a href="/login.php?provider=facebook" title="Connexion Facebook">Facebook</a>
+                        <h2>ou</h2>
+                        <form role="form">
+                            <fieldset>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                </div>
+                                
+                                <!-- Change this to a button or input when using this as a form -->
+                                <a href="index.html" class="btn btn-lg btn-success btn-block">connexion</a>
+                            </fieldset>
+                            
+                        </form>
+                        <!--<div id="status"></div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+   
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../js/sb-admin-2.js"></script>
+    <script>
+ 
+
+
+</body>
+
+</html>
