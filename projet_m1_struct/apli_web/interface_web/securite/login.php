@@ -23,9 +23,11 @@ if(isset($_REQUEST["provider"]))
       }
       else
       {
+        echo "user inexistant";
+        echo $user_data;
          /*Sinon on redirige le visiteur vers le formulaire d'inscription en récupérant au préalable les données qui nous intéressent en vue de pré-remplir les champs*/
-         header('location:/inscription.php?email='.$user_data->email);
-         exit; 
+         //header('location:/inscription.php?email='.$user_data->email);
+         //exit; 
       }
    }
 catch( Exception $e ){  
