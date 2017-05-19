@@ -29,8 +29,8 @@ if(isset($_REQUEST["provider"]))
         // On enregistre le login en session
         $_SESSION['login'] = $user_data->displayName;
          /*Sinon on redirige le visiteur vers le formulaire d'inscription en récupérant au préalable les données qui nous intéressent en vue de pré-remplir les champs*/
-         header('location:/inscription.php?email='.$user_data->email);
-         exit;
+         header('Location: http://http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/html/tableau.php');
+  exit();
       }
    }
 catch( Exception $e ){  
