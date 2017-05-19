@@ -2,7 +2,7 @@
  header('Content-Type: text/html; charset: UTF-8');
 
 	// 1 : on ouvre le fichier
-$monfichier = fopen('../../simulateur_java/e.txt', 'r+');
+$monfichier = fopen('../../../simulateur_java/e.txt', 'r+');
  
 // 2 : on lit la première ligne du fichier
 $niveau="";
