@@ -24,8 +24,6 @@ if(isset($_REQUEST["provider"]))
       }
       else
       {
-        
-
         // On enregistre le login en session
         $_SESSION['login'] = $user_data->displayName;
          /*Sinon on redirige le visiteur vers le formulaire d'inscription en récupérant au préalable les données qui nous intéressent en vue de pré-remplir les champs*/
