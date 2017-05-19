@@ -22,7 +22,7 @@ function validateJSON(jsonText)
 function doItOnInterval(nb_capteur)
 {
   var http = createRequestObject();
-  http.open('GET', '../lecturelivetouscapteurs.php', true);
+  http.open('GET', '../affichage_donnee/lecturelivetouscapteurs.php', true);
   http.onreadystatechange = (function ()
     {
       if (http.readyState == 4)
