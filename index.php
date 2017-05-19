@@ -5,9 +5,9 @@ session_start();
 if(empty($_SESSION['login'])) 
 {
   // Si inexistante ou nulle, on redirige vers le formulaire de login
-  header('Location: http://http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/securite/Facebook.php');
+  header('Location: http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/securite/Facebook.php');
   exit();
 }else{
-	header('Location: http://http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/html/tableau.php');
+	header('Location: http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/html/tableau.php');
 }
 ?>
