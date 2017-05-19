@@ -63,7 +63,7 @@ if(empty($_SESSION['login']))
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right">
-                <li><a href="../securite/logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout: <?php echo $_SESSION['login']; ?></a>
+                <li><a href="../securite/logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout : <?php echo $_SESSION['login']; ?></a>
                 </li>
             </ul>
             <!-- /.navbar-top-links -->
