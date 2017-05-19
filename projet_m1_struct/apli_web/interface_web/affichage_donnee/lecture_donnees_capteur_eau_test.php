@@ -9,7 +9,7 @@ catch (Exception $e)
     die('Erreur : ' . $e->getMessage());
 }
 
-$rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur=1 ORDER BY id_valeur DESC LIMIT 0,1 ');
+$rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur=2 ORDER BY id_valeur DESC LIMIT 0,1 ');
 
 
 $str="";
