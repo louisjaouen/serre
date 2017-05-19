@@ -19,6 +19,3 @@ if(empty($_SESSION['login']))
 
  ?>
 
-
-
-
