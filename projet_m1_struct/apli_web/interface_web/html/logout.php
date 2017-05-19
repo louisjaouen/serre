@@ -7,7 +7,16 @@ if(empty($_SESSION['login']))
   // Si inexistante ou nulle, on redirige vers le formulaire de login
   header('Location: http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/securite/Facebook.php');
   exit();
-} ?>
+}else{
+
+   $_SESSION = array();
+  // Destruction de la session
+  session_destroy();
+  // Destruction du tableau de session
+  unset($_SESSION);
+}
+
+ ?>
 
 
 <!DOCTYPE html>
