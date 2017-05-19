@@ -86,7 +86,7 @@ $(function() {
             
             
             
-            data.push(y < 0 ? 0 : y > 100 ? 100 : y);
+            data.push(y < 0 ? 0 : y > 10000 ? 1000 : y);
         }
 
         // zip the generated y values with the x values
@@ -145,7 +145,7 @@ $(function() {
         },
         yaxis: {
             min: 0,
-            max: 110
+            max: 1010
         },
         legend: {
             show: true
