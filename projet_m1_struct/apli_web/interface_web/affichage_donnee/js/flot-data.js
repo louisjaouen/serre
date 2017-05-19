@@ -25,7 +25,7 @@ function validateJSON(jsonText)
 function doItOnInterval()
 {
   var http = createRequestObject();
-  http.open('GET', '../../bdd/lecture_donnees_capteur_eau_test.php', true);
+  http.open('GET', '../lecture_donnees_capteur_eau_test.php', true);
   http.onreadystatechange = (function ()
     {
       if (http.readyState == 4)

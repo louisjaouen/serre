@@ -44,7 +44,7 @@ if(empty($_SESSION['login']))
 
 </head>
 <body>
-	<script src="../js/miseajourcapteurlive.js"></script>
+	<script src="../affichage_donnee/js/miseajourcapteurlive.js"></script>
 
   
     <div id="wrapper">
