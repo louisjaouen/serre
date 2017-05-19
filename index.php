@@ -9,5 +9,6 @@ if(empty($_SESSION['login']))
   exit();
 }else{
 	header('Location: http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/html/tableau.php');
+	exit();
 }
 ?>

@@ -64,7 +64,7 @@ if(empty($_SESSION['login']))
             <ul class="nav navbar-top-links navbar-right">
                 <li><div id="status">
                 </div></li>
-                <li><a href="login.php"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
+                <li><a href="login.php"><i class="fa fa-sign-out fa-fw"></i>Logout : <?php echo $_SESSION['login']; ?></a>
                 </li>
             </ul>
             <!-- /.navbar-top-links -->
