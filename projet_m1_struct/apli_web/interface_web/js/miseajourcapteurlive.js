@@ -72,12 +72,12 @@ function doItOnInterval(nb_capteur)
           }
           else
           {
-            alert('probléme d\'actualisation du DOM');
+            console.log('probléme d\'actualisation du DOM');
           }
         }
         else
         {
-          alert('ereur requete ajax');
+          console.log('ereur requete ajax');
         }
       }
     });
@@ -88,5 +88,5 @@ function doItOnInterval(nb_capteur)
 //Call the ajax refresh each seconds
 
 doItOnInterval(7);
-setInterval("doItOnInterval(7)", 1000);
+setInterval("doItOnInterval(7)", 900);
 
