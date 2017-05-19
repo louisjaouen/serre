@@ -21,7 +21,7 @@ if(empty($_SESSION['login']))
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>Bassin 1</title><!--ajouter numero bassin via bdd-->
 
     <!-- Bootstrap Core CSS -->
     <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@ if(empty($_SESSION['login']))
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand"  href="index.html">Goarem: données</a>
+                <a class="navbar-brand">vue courbes: Bassin 1</a>
             </div>
             <!-- /.navbar-header -->
 

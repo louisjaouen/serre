@@ -22,7 +22,7 @@ if(empty($_SESSION['login']))
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Adminisatration de la Serre de Goarem An Abat</title>
+    <title>Bassin 1</title><!-- ajoute numero de bassin via php-->
 
     <!-- Bootstrap Core CSS -->
     <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@ if(empty($_SESSION['login']))
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="tableau.php">Adminisatration de la Serre de Goarem An Abat</a>
+                <a class="navbar-brand">vue Live: Bassin 1</a>
             </div>
             <!-- /.navbar-header -->
             <ul class="nav navbar-top-links navbar-right">
@@ -90,7 +90,7 @@ if(empty($_SESSION['login']))
             <div class="row">
             <div class="center">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Dashboard</h1>
+                    <h1 class="page-header">vue Bassin 1</h1> <!--ajouté numero de bassin par bdd-->
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
