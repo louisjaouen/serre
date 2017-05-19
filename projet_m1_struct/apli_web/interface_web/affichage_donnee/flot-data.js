@@ -42,12 +42,12 @@ function doItOnInterval()
           }
           else
           {
-            alert('probléme d\'actualisation du DOM');
+            console.log('probléme d\'actualisation du DOM');
           }
         }
         else
         {
-          alert('ereur requete ajax');
+          console.log('ereur requete ajax');
         }
       }
     });
