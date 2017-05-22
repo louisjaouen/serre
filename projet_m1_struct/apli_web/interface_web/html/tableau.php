@@ -2,12 +2,12 @@
 // On prolonge la session
 session_start();
 // On teste si la variable de session existe et contient une valeur
-//if(empty($_SESSION['login'])) 
-//{
+if(empty($_SESSION['login'])) 
+{
   // Si inexistante ou nulle, on redirige vers le formulaire de login
-  //header('Location: http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/securite/Facebook.php');
-  //exit();
-//} ?>
+  header('Location: http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/securite/Facebook.php');
+  exit();
+} ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -64,10 +64,12 @@ session_start();
             </div>
             <!-- /.navbar-header -->
 
+            
             <ul class="nav navbar-top-links navbar-right">
                 <li><a href="../securite/logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout : <?php echo $_SESSION['login']; ?></a>
                 </li>
             </ul>
+            
             <!-- /.navbar-top-links -->
 
             <div class="navbar-default sidebar" role="navigation">
