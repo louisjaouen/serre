@@ -23,6 +23,15 @@
 	$str .= '[';
 	$str .= '{"valeur": "';
 
+	$str .= $capteur;
+    $str .= '"},';
+    $str .= '{"valeur": "';
+
+    $str .= $nombre_de_valeur;
+    $str .= '"},';
+    $str .= '{"valeur": "';
+
+
 	while($donnees= $rep->fetch()){
 	    $str .= $donnees['value'];
 	    $str .= '"},';
