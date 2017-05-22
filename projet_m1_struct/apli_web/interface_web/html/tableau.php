@@ -30,7 +30,7 @@ if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION[
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Bassin 1</title>
+    <title>Bassin <?php echo $_SESSION['bassin'];?></title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -70,7 +70,7 @@ if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION[
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand">vue live: Bassin </a>
+                <a class="navbar-brand">vue live: Bassin <?php echo $_SESSION['bassin'];?></a>
             </div>
             <!-- /.navbar-header -->
 

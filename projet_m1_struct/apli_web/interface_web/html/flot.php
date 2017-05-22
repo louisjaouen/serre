@@ -32,7 +32,7 @@ if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION[
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Bassin 1</title><!--ajouter numero bassin via bdd-->
+    <title>Bassin <?php echo $_SESSION['bassin'];?></title><!--ajouter numero bassin via bdd-->
 
     <!-- Bootstrap Core CSS -->
     <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -71,7 +71,7 @@ if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION[
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand">vue courbes: Bassin 1</a>
+                <a class="navbar-brand">vue courbes: Bassin <?php echo $_SESSION['bassin'];?></a>
             </div>
             <!-- /.navbar-header -->
 
