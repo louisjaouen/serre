@@ -21,7 +21,7 @@
 		WHERE id_capteur = ?  
 		ORDER BY date_valeur 
 		DESC LIMIT 0,?');
-	$rep->execute(array(2, 10));
+	$rep->execute(array('2', '10'));
 
 	$str="";
 	$str .= '[';
