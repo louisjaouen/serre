@@ -23,8 +23,8 @@
 		. ' DESC LIMIT 0,?;';
 	$prep = $bdd->prepare($sql);
 
-	$prep->bindValue(1, 2, PDO::PARAM_INT);
-	$prep->bindValue(2, 10, PDO::PARAM_INT);
+	$prep->bindValue(1, $capteur, PDO::PARAM_INT);
+	$prep->bindValue(2, $nombre_de_valeur, PDO::PARAM_INT);
 	$prep->execute();
 
 
@@ -32,13 +32,7 @@
 	$str .= '[';
 	$str .= '{"valeur": "';
 
-	$str .= $capteur;
-    $str .= '"},';
-    $str .= '{"valeur": "';
-
-    $str .= $nombre_de_valeur;
-    $str .= '"},';
-    $str .= '{"valeur": "';
+	
 
 
 	while($donnees= $prep->fetch()){
