@@ -16,12 +16,17 @@
 	}
 
 	
-	$rep = $bdd->prepare('SELECT * 
-		FROM valeur 
-		WHERE id_capteur = ?  
-		ORDER BY date_valeur 
-		DESC LIMIT 0,?');
-	$rep->execute(array('2', '10'));
+	$sql = 'SELECT *' 
+		. ' FROM valeur' 
+		. ' WHERE id_capteur = ?'  
+		. ' ORDER BY date_valeur' 
+		. ' DESC LIMIT 0,?;';
+	$prep = $bdd->prepare($sql);
+
+	$prep->bindValue(1, 2, PDO::PARAM_INT);
+	$prep->bindValue(2, 10, PDO::PARAM_INT);
+	$prep->execute();
+
 
 	$str="";
 	$str .= '[';
@@ -36,7 +41,7 @@
     $str .= '{"valeur": "';
 
 
-	while($donnees= $rep->fetch()){
+	while($donnees= $prep->fetch()){
 	    $str .= $donnees['value'];
 	    $str .= '"},';
 	    $str .= '{"valeur": "';
