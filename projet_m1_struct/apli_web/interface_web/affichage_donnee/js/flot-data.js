@@ -27,7 +27,6 @@ function doItOnInterval()
   var http = createRequestObject();
   
   http.open('GET', '../affichage_donnee/lecture_donnees_capteur_eau_test.php', true);
-  //http.open('GET', '../affichage_donnee/lecture_valeur_bdd.php?b=1&c=2&v=1', true);
   http.onreadystatechange = (function ()
     {
       if (http.readyState == 4)
