@@ -35,39 +35,39 @@ function doItOnInterval(nb_capteur)
             var str = '';
             for(var i=0;i<nb_capteur;i++){
               var num_capteur=i;
-            var donnee = donnees_capteur[num_capteur];
-            var valeur_capteur = 100;
-            donnee = donnees_capteur[num_capteur];
+              var donnee = donnees_capteur[num_capteur];
+              var valeur_capteur = 100;
+              donnee = donnees_capteur[num_capteur];
 
-            if(num_capteur==0){
-              //modifier texte
-              valeur_capteur =  Math.floor(parseInt(donnee.valeur));
-              //modifier le dessin
-              document.getElementById("watertext").innerHTML = "niveau d'eau : " + valeur_capteur + "cm";
-              document.getElementById("waterimg").setAttribute("height",3*valeur_capteur);
-              document.getElementById("waterimg").setAttribute("y",89+(350-3*valeur_capteur));
-            }else if(num_capteur==1){
-              valeur_capteur = Math.floor(parseInt(donnee.valeur));
-              //modifier le dessin
-              document.getElementById("phtext").innerHTML = "pH : " + valeur_capteur ;
-              document.getElementById("phimg").setAttribute("x1",500+(100*(valeur_capteur-7)));
-              document.getElementById("phimg").setAttribute("x2",500+(100*(valeur_capteur-7)));
-            }else if(num_capteur==2){
-              valeur_capteur = Math.floor(parseInt(donnee.valeur));
-              document.getElementById("lumitext").innerHTML = "luminosité : " + valeur_capteur +" Lux" ;
-            }else if(num_capteur==3){
-              valeur_capteur = Math.floor( parseInt(donnee.valeur));
-              document.getElementById("tempeautext").innerHTML = "température de l'eau : " + valeur_capteur +" °C" ;
-            }else if(num_capteur==4){
-              valeur_capteur = Math.floor( parseInt(donnee.valeur));
-              document.getElementById("tempairtext").innerHTML = "température de l'air : " + valeur_capteur +" °C" ;
-            }else if(num_capteur==5){
-              valeur_capteur = Math.floor( parseInt(donnee.valeur));
-              document.getElementById("humitext").innerHTML = "humidité : " + valeur_capteur +" %" ;
-            }else if(num_capteur==6){
-              valeur_capteur = Math.floor( parseInt(donnee.valeur));
-              document.getElementById("salitext").innerHTML = "salinité : " + valeur_capteur +" %" ;
-            }
+              if(num_capteur==0){
+                //modifier texte
+                valeur_capteur =  Math.floor(parseInt(donnee.valeur));
+                //modifier le dessin
+                document.getElementById("watertext").innerHTML = "niveau d'eau : " + valeur_capteur + "cm";
+                document.getElementById("waterimg").setAttribute("height",3*valeur_capteur);
+                document.getElementById("waterimg").setAttribute("y",89+(350-3*valeur_capteur));
+              }else if(num_capteur==1){
+                valeur_capteur = Math.floor(parseInt(donnee.valeur));
+                //modifier le dessin
+                document.getElementById("phtext").innerHTML = "pH : " + valeur_capteur ;
+                document.getElementById("phimg").setAttribute("x1",500+(100*(valeur_capteur-7)));
+                document.getElementById("phimg").setAttribute("x2",500+(100*(valeur_capteur-7)));
+              }else if(num_capteur==2){
+                valeur_capteur = Math.floor(parseInt(donnee.valeur));
+                document.getElementById("lumitext").innerHTML = "luminosité : " + valeur_capteur +" Lux" ;
+              }else if(num_capteur==3){
+                valeur_capteur = Math.floor( parseInt(donnee.valeur));
+                document.getElementById("tempeautext").innerHTML = "température de l'eau : " + valeur_capteur +" °C" ;
+              }else if(num_capteur==4){
+                valeur_capteur = Math.floor( parseInt(donnee.valeur));
+                document.getElementById("tempairtext").innerHTML = "température de l'air : " + valeur_capteur +" °C" ;
+              }else if(num_capteur==5){
+                valeur_capteur = Math.floor( parseInt(donnee.valeur));
+                document.getElementById("humitext").innerHTML = "humidité : " + valeur_capteur +" %" ;
+              }else if(num_capteur==6){
+                valeur_capteur = Math.floor( parseInt(donnee.valeur));
+                document.getElementById("salitext").innerHTML = "salinité : " + valeur_capteur +" %" ;
+              }
             }
           }
           else
