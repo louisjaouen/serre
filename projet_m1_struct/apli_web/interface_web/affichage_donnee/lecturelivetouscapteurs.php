@@ -12,7 +12,7 @@
 	    die('Erreur : ' . $e->getMessage());
 	}
 
-	$rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur=1 DESC LIMIT 0,1 ');
+	$rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur=1  LIMIT 0,3 ');
 
 
 	$str="";
