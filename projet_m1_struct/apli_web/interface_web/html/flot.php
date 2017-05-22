@@ -104,7 +104,7 @@ if(empty($_SESSION['login']))
                                     <a href="flot.php"><i class="fa  fa-fw"></i> Bassin 3</a>
                                 </li> 
                                 <li>
-                                    <a href="flot.php"><i class="fa  fa-fw"></i> Bassin 4</a>
+                                    <a href="flot.php?b=4&c=1"><i class="fa  fa-fw"></i> Bassin 4</a>
                                 </li>         
                             </ul>
                         </li>
