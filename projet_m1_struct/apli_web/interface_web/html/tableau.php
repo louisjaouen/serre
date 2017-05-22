@@ -20,7 +20,7 @@ session_start();
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>Bassin 1</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -78,10 +78,10 @@ session_start();
                             <a href="tableau.php"><i class="fa fa-dashboard fa-fw"></i> Capteurs live</a>
                             <ul>
                                 <li>
-                                    <a href="tableau.php"><i class="fa fa-square-o fa-fw"></i> Bassin 1</a>
+                                    <a href="tableau.php"><i class="fa  fa-fw"></i> Bassin 1</a>
                                 </li>
                                 <li>
-                                    <a href="tableau.php"><i class="fa fa-square-o fa-fw"></i> Bassin 2</a>
+                                    <a href="tableau.php"><i class="fa  fa-fw"></i> Bassin 2</a>
                                 </li>        
                             </ul>
                         </li>
@@ -89,10 +89,10 @@ session_start();
                             <a href="flot.php"><i class="fa fa-bar-chart-o fa-fw"></i> Graphique</a>
                             <ul>
                                 <li>
-                                    <a href="flot.php"><i class="fa fa-square-o fa-fw"></i> Bassin 1</a>
+                                    <a href="flot.php"><i class="fa  fa-fw"></i> Bassin 1</a>
                                 </li>
                                 <li>
-                                    <a href="flot.php"><i class="fa fa-square-o fa-fw"></i> Bassin 2</a>
+                                    <a href="flot.php"><i class="fa  fa-fw"></i> Bassin 2</a>
                                 </li>        
                             </ul>
                         </li>
