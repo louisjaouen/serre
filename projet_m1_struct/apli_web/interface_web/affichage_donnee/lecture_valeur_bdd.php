@@ -6,6 +6,7 @@
 
 
 
+
 	try{
         // Sous MAMP (Mac)
         $bdd = new PDO('mysql:host=localhost;dbname=projet;charset=utf8', 'root', 'Louloudu29');
@@ -23,8 +24,8 @@
 		. ' DESC LIMIT 0,?;';
 	$prep = $bdd->prepare($sql);
 
-	$prep->bindValue(1, $capteur, PDO::PARAM_INT);
-	$prep->bindValue(2, $nombre_de_valeur, PDO::PARAM_INT);
+	$prep->bindValue(1, intval($capteur,10), PDO::PARAM_INT);
+	$prep->bindValue(2, intval($nombre_de_valeur,10), PDO::PARAM_INT);
 	$prep->execute();
 
 
