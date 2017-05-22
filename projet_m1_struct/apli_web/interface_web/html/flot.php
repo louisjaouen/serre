@@ -154,7 +154,7 @@ if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION[
                     <!-- /.panel -->
                 </div>
                 <!-- /.col-lg-12 -->
-                <div class="col-lg-12">
+                <div class="col-lg-6">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             Multiple Axes Line Chart Example
