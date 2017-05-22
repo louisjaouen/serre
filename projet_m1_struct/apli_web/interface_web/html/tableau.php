@@ -7,10 +7,14 @@ if(empty($_SESSION['login']))
   // Si inexistante ou nulle, on redirige vers le formulaire de login
   header('Location: http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/securite/Facebook.php');
   exit();
-} 
+}
+if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION['nombre_de_valeur'])) 
+{
+  $_SESSION['bassin']=1;
+  $_SESSION['capteur']=1;
+  $_SESSION['nombre_de_valeur']=100;
+}
 
-$bassin=$_GET['b'];
-$capteur=$_GET['c'];
 
 
 ?>
@@ -66,7 +70,7 @@ $capteur=$_GET['c'];
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand">vue live: Bassin <?php echo  $bassin;?></a>
+                <a class="navbar-brand">vue live: Bassin </a>
             </div>
             <!-- /.navbar-header -->
 

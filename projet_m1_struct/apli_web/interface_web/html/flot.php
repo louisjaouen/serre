@@ -7,7 +7,18 @@ if(empty($_SESSION['login']))
   // Si inexistante ou nulle, on redirige vers le formulaire de login
   header('Location: http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/securite/Facebook.php');
   exit();
-} ?>  
+} 
+if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION['nombre_de_valeur'])) 
+{
+  $_SESSION['bassin']=1;
+  $_SESSION['capteur']=1;
+  $_SESSION['nombre_de_valeur']=100;
+}
+
+
+
+
+?>  
 
 
 <!DOCTYPE html>
@@ -104,7 +115,7 @@ if(empty($_SESSION['login']))
                                     <a href="flot.php"><i class="fa  fa-fw"></i> Bassin 3</a>
                                 </li> 
                                 <li>
-                                    <a href="flot.php?b=4&c=1"><i class="fa  fa-fw"></i> Bassin 4</a>
+                                    <a href="flot.php"><i class="fa  fa-fw"></i> Bassin 4</a>
                                 </li>         
                             </ul>
                         </li>

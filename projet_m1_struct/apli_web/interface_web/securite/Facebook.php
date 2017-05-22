@@ -11,6 +11,13 @@ if(empty($_SESSION['login']))
   header('Location: http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/html/tableau.php');
   exit();
 }
+if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION['nombre_de_valeur'])) 
+{
+  $_SESSION['bassin']=1;
+  $_SESSION['capteur']=1;
+  $_SESSION['nombre_de_valeur']=100;
+}
+
 
  ?>
 
