@@ -12,21 +12,56 @@
 	    die('Erreur : ' . $e->getMessage());
 	}
 
-	$rep = $bdd->query('SELECT * FROM valeur ORDER BY date_valeur  DESC LIMIT 0,6 ');
+	$rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur=1 ORDER BY date_valeur  DESC LIMIT 0,1 ');
 
 
 	$str="";
 	$str .= '[';
 	$str .= '{"valeur": "';
 
-	while($donnees= $rep->fetch()){
-	    $str .= $donnees['value'];
-	    $str .= '"},';
-	    $str .= '{"valeur": "';
-	}
-	$str .= 666;
-	$str .= '"}';
-	$str.=']';
+
+	$donnees= $rep->fetch()
+    $str .= $donnees['value'];
+    $str .= '"},';
+    $str .= '{"valeur": "';
+
+    $rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur=1 ORDER BY date_valeur  DESC LIMIT 0,1 ');
+    $donnees= $rep->fetch()
+    $str .= $donnees['value'];
+    $str .= '"},';
+    $str .= '{"valeur": "';
+
+    $rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur=2 ORDER BY date_valeur  DESC LIMIT 0,1 ');
+    $donnees= $rep->fetch()
+    $str .= $donnees['value'];
+    $str .= '"},';
+    $str .= '{"valeur": "';
+
+    $rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur=3 ORDER BY date_valeur  DESC LIMIT 0,1 ');
+    $donnees= $rep->fetch()
+    $str .= $donnees['value'];
+    $str .= '"},';
+    $str .= '{"valeur": "';
+
+    $rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur=4 ORDER BY date_valeur  DESC LIMIT 0,1 ');
+    $donnees= $rep->fetch()
+    $str .= $donnees['value'];
+    $str .= '"},';
+    $str .= '{"valeur": "';
+
+    $rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur=5 ORDER BY date_valeur  DESC LIMIT 0,1 ');
+    $donnees= $rep->fetch()
+    $str .= $donnees['value'];
+    $str .= '"},';
+    $str .= '{"valeur": "';
+
+    $rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur=6 ORDER BY date_valeur  DESC LIMIT 0,1 ');
+    $donnees= $rep->fetch()
+    $str .= $donnees['value'];
+    $str .= '"}';
+    $str .= ']';
+
+	
 	echo $str;
 
 
