@@ -126,9 +126,7 @@ if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION[
             </div>
             <!-- /.navbar-static-side -->
         </nav>
-        <?php if($_SESSION['bassin']==1){
-
-        }?>
+        
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
@@ -166,7 +164,7 @@ if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION[
            
         </div>
         <!-- /#page-wrapper -->
-        <?php else{}?>
+        
 
     </div>
     <!-- /#wrapper -->
