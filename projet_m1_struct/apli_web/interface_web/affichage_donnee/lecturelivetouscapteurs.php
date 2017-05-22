@@ -25,12 +25,6 @@
     $str .= '"},';
     $str .= '{"valeur": "';
 
-    $rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur=1 ORDER BY date_valeur  DESC LIMIT 0,1 ');
-    $donnees= $rep->fetch();
-    $str .= $donnees['value'];
-    $str .= '"},';
-    $str .= '{"valeur": "';
-
     $rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur=2 ORDER BY date_valeur  DESC LIMIT 0,1 ');
     $donnees= $rep->fetch();
     $str .= $donnees['value'];
