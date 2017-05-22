@@ -16,8 +16,12 @@
 	}
 
 	
-	$rep = $bdd->prepare('SELECT * FROM valeur WHERE id_capteur = 2  ORDER BY date_valeur DESC LIMIT 0,10');
-	$rep->execute(array(':id_capteur' => $capteur, ':nombre_de_valeur' => $nombre_de_valeur));
+	$rep = $bdd->prepare('SELECT * 
+		FROM valeur 
+		WHERE id_capteur = ?  
+		ORDER BY date_valeur 
+		DESC LIMIT 0,?');
+	$rep->execute(array($capteur, $nombre_de_valeur));
 
 	$str="";
 	$str .= '[';
