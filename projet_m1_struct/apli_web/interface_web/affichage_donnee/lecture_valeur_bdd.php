@@ -16,7 +16,7 @@
 	}
 
 	
-	$rep = $bdd->prepare('SELECT * FROM valeur WHERE id_capteur = ?   DESC LIMIT 0,?');
+	$rep = $bdd->prepare('SELECT * FROM valeur WHERE id_capteur = ?  ORDER BY date_valeur DESC LIMIT 0,?');
 	$rep->execute(array($capteur, $nombre_de_valeur));
 
 	$str="";
