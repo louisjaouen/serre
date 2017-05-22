@@ -2,12 +2,12 @@
 // On prolonge la session
 session_start();
 // On teste si la variable de session existe et contient une valeur
-if(empty($_SESSION['login'])) 
-{
+//if(empty($_SESSION['login'])) 
+//{
   // Si inexistante ou nulle, on redirige vers le formulaire de login
-  header('Location: http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/securite/Facebook.php');
-  exit();
-} ?>
+  //header('Location: http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/securite/Facebook.php');
+  //exit();
+//} ?>  
 
 
 <!DOCTYPE html>
@@ -25,6 +25,8 @@ if(empty($_SESSION['login']))
 
     <!-- Bootstrap Core CSS -->
     <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
     <link href="../../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
@@ -73,10 +75,26 @@ if(empty($_SESSION['login']))
                     <ul class="nav" id="side-menu">
                         
                         <li>
-                            <a href="tableau.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="tableau.php"><i class="fa fa-dashboard fa-fw"></i> Capteurs live</a>
+                            <ul>
+                                <li>
+                                    <a href="tableau.php"><i class="fa fa-square-o fa-fw"></i> Bassin 1</a>
+                                </li>
+                                <li>
+                                    <a href="tableau.php"><i class="fa fa-square-o fa-fw"></i> Bassin 2</a>
+                                </li>        
+                            </ul>
                         </li>
                         <li>
-                            <a href="flot.php"><i class="fa fa-bar-chart-o fa-fw"></i> Charts</a>
+                            <a href="flot.php"><i class="fa fa-bar-chart-o fa-fw"></i> Graphique</a>
+                            <ul>
+                                <li>
+                                    <a href="flot.php"><i class="fa fa-square-o fa-fw"></i> Bassin 1</a>
+                                </li>
+                                <li>
+                                    <a href="flot.php"><i class="fa fa-square-o fa-fw"></i> Bassin 2</a>
+                                </li>        
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -88,7 +106,8 @@ if(empty($_SESSION['login']))
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Flot</h1>
+                    <h1 class="page-header">Bassin 1  </h1>
+                    
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
