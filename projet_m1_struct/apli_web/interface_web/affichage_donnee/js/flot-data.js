@@ -167,14 +167,8 @@ $(function() {
 
 //Flot Multiple Axes Line Chart
 $(function() {
+    var donnees_annees;
     
-    var tst= [
-        [1495088872000, 51.21],
-        [1495288884000, 134.62],
-        [1495488896000, 139.64],
-        [1495688984000, 134.62],
-        [1495888896000, 139.64]
-        ]
 
         var http = createRequestObject();
   
@@ -185,11 +179,11 @@ $(function() {
           {
             if (http.status == 200)
             {
-              var donnees_annees = http.responseText;
+              donnees_annees = http.responseText;
               if (donnees_annees !== false)
               {
                     console.log(donnees_annees);
-                    tst = donnees_annees;
+                    
               }
               else
               {
@@ -210,7 +204,7 @@ $(function() {
 
     function doPlot(position) {
         $.plot($("#flot-line-chart-multi"), [{
-            data: tst,
+            data: donnees_annees,
             label: "test",
             yaxis: 1
         }], {
