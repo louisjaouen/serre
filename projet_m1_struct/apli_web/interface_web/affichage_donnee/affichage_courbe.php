@@ -214,7 +214,7 @@ function unix_timestamp($date)
     $str .= $b;
     $str .= ']';
     $str .= ']';
-    $str .= '}}'
+    $str .= '}}';
 	
 	echo $str;
 
