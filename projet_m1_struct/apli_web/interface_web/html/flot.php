@@ -152,6 +152,24 @@ if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION[
                     <!-- /.panel -->
                 </div>
                 <!-- /.col-lg-6 -->
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            plot toggle
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="flot-chart">
+                                <div class="demo-container">
+                                    <div id="placeholder" class="demo-placeholder" style="float:left; width:675px;"></div>
+                                    <p id="choices" style="float:right; width:135px;"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
                 
                 
                 
