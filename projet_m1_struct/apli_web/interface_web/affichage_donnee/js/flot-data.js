@@ -1157,6 +1157,7 @@ $(function() {
         [1220824800000, 0.7010],
         [1220911200000, 0.70050]
     ];
+    console.log(oilprices);
 
     function euroFormatter(v, axis) {
         return v.toFixed(axis.tickDecimals) + "€";
