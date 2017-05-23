@@ -90,16 +90,7 @@ if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION[
                             <ul>
                                 <li>
                                     <a href="tableau.php"><i class="fa  fa-fw"></i> Bassin 1</a>
-                                </li>
-                                <li>
-                                    <a href="tableau.php"><i class="fa  fa-fw"></i> Bassin 2</a>
-                                </li>
-                                <li>
-                                    <a href="tableau.php"><i class="fa  fa-fw"></i> Bassin 3</a>
-                                </li>
-                                <li>
-                                    <a href="tableau.php"><i class="fa  fa-fw"></i> Bassin 4</a>
-                                </li>       
+                                </li>      
                             </ul>
                         </li>
                         <li>
@@ -107,16 +98,7 @@ if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION[
                             <ul>
                                 <li>
                                     <a href="flot.php"><i class="fa  fa-fw"></i> Bassin 1</a>
-                                </li>
-                                <li>
-                                    <a href="flot.php"><i class="fa  fa-fw"></i> Bassin 2</a>
-                                </li>
-                                <li>
-                                    <a href="flot.php"><i class="fa  fa-fw"></i> Bassin 3</a>
-                                </li> 
-                                <li>
-                                    <a href="flot.php"><i class="fa  fa-fw"></i> Bassin 4</a>
-                                </li>         
+                                </li>       
                             </ul>
                         </li>
                     </ul>
