@@ -1,6 +1,7 @@
+var donnees_annees;
 
 var http = createRequestObject();
-var donnees_annees;
+
 http.open('GET', '../affichage_donnee/test_donnee_sur_un_an.php', true);
 http.onreadystatechange = (function ()
 {
@@ -8,7 +9,7 @@ http.onreadystatechange = (function ()
   {
     if (http.status == 200)
     {
-      var donnees_annees = http.responseText;
+      donnees_annees = http.responseText;
       if (donnees_annees !== false)
       {
             console.log(donnees_annees);
