@@ -33,13 +33,18 @@ if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION[
 
 	$str="";
 	$str .= '[';
-	$str .= '{"valeur": "';
+	
 
 
 	while($donnees= $rep->fetch()){
+		$str .= '[';
+	    $str .= $donnees['date_valeur'];
+	    $str .= ',';
 	    $str .= $donnees['value'];
-	    $str .= '"},';
-	    $str .= '{"valeur": "';
+	    $str .= ']';
+	    if($donnees == NULL){
+	    	$str .=']';
+	    }
 	}
 
     
