@@ -274,7 +274,7 @@ $(function() {
                         show: true
                     },
                     points: {
-                        show: true
+                        show: false
                     }
                 },
                 grid: {
@@ -283,14 +283,15 @@ $(function() {
                     
                 },
                 xaxis: {
-                    tickDecimals: 0
+                    mode: 'time'
                 },
                 tooltip: true,
                 tooltipOpts: {
-                    content: "'%s' of %x.1 is %y.4",
-                    shifts: {
-                        x: -60,
-                        y: 25
+                    content: "%s for %x was %y",
+                    xDateFormat: "%y-%0m-%0d",
+
+                    onHover: function(flotItem, $tooltipEl) {
+                        // console.log(flotItem, $tooltipEl);
                     }
                 }
             });
