@@ -1,3 +1,35 @@
+var donnees_annees;
+var http = createRequestObject();
+
+http.open('GET', '../affichage_donnee/test_donnee_sur_un_an.php', true);
+http.onreadystatechange = (function ()
+{
+  if (http.readyState == 4)
+  {
+    if (http.status == 200)
+    {
+      donnees_annees = http.responseText;
+      if (donnees_annees !== false)
+      {
+            console.log(donnees_annees);
+            
+      }
+      else
+      {
+        console.log('probléme d\'actualisation du DOM');
+      }
+    }
+    else
+    {
+      console.log('ereur requete ajax');
+    }
+  }
+  console.log(donnees_annees);
+});
+http.send(null);
+
+
+
 //Flot Moving Line Chart
 var y=0;
 var i=0;
@@ -167,7 +199,7 @@ $(function() {
 
 //Flot Multiple Axes Line Chart
 $(function() {
-    var donnees_annees;
+    
     var tst= [
         [1495088872000, 51.21],
         [1495288884000, 134.62],
@@ -176,34 +208,7 @@ $(function() {
         [1495888896000, 139.64]
         ]
 
-    var http = createRequestObject();
-
-    http.open('GET', '../affichage_donnee/test_donnee_sur_un_an.php', true);
-    http.onreadystatechange = (function ()
-    {
-      if (http.readyState == 4)
-      {
-        if (http.status == 200)
-        {
-          donnees_annees = http.responseText;
-          if (donnees_annees !== false)
-          {
-                console.log(donnees_annees);
-                
-          }
-          else
-          {
-            console.log('probléme d\'actualisation du DOM');
-          }
-        }
-        else
-        {
-          console.log('ereur requete ajax');
-        }
-      }
-      console.log(donnees_annees);
-    });
-    http.send(null);
+    
     console.log(donnees_annees);
     function euroFormatter(v, axis) {
         return v.toFixed(axis.tickDecimals) + "%";
