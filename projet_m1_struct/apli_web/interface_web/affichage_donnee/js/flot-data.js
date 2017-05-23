@@ -167,7 +167,7 @@ $(function() {
 
 //Flot Multiple Axes Line Chart
 $(function() {
-    
+    var donnees_annees;
     var tst= [
         [1495088872000, 51.21],
         [1495288884000, 134.62],
@@ -185,7 +185,7 @@ $(function() {
       {
         if (http.status == 200)
         {
-          var donnees_annees = http.responseText;
+          donnees_annees = http.responseText;
           if (donnees_annees !== false)
           {
                 console.log(donnees_annees);
@@ -201,9 +201,10 @@ $(function() {
           console.log('ereur requete ajax');
         }
       }
+      console.log(donnees_annees);
     });
     http.send(null);
-
+    console.log(donnees_annees);
     function euroFormatter(v, axis) {
         return v.toFixed(axis.tickDecimals) + "%";
     }
