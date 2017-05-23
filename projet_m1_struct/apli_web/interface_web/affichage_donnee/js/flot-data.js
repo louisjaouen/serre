@@ -188,7 +188,7 @@ $(function() {
               var donnees_annees = http.responseText;
               if (donnees_annees !== false)
               {
-                    var tst2 = donnees_annees;
+                    console.log(donnees_annees);
                     
               }
               else
