@@ -121,7 +121,6 @@ function unix_timestamp($date)
     $str .= $b;
     $str .= ']';
     $str .= ']';
-    $str .= '}';
 
     $str .= '},"air":{"label":"température air","data":[';
     $rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur = 5 ORDER BY date_valeur  DESC LIMIT 0,100 ');
