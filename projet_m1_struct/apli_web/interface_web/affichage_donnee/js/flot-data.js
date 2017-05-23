@@ -240,14 +240,14 @@ $(function() {
     // countries are turned on/off
 
     var i = 0;
-    $.each(donnees_annees, function(key, val) {
+    $.each(datasets, function(key, val) {
         val.color = i;
         ++i;
     });
 
     // insert checkboxes 
     var choiceContainer = $("#choices");
-    $.each(donnees_annees, function(key, val) {
+    $.each(datasets, function(key, val) {
         choiceContainer.append("<br/><input type='checkbox' name='" + key +
             "' checked='checked' id='id" + key + "'></input>" +
             "<label for='id" + key + "'>"
@@ -262,8 +262,8 @@ $(function() {
 
         choiceContainer.find("input:checked").each(function () {
             var key = $(this).attr("name");
-            if (key && donnees_annees[key]) {
-                data.push(donnees_annees[key]);
+            if (key && datasets[key]) {
+                data.push(datasets[key]);
             }
         });
 
