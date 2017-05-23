@@ -199,24 +199,18 @@ $(function() {
 
 //Flot Multiple Axes Line Chart
 $(function() {
-    
-    var tst= [
-        [1495088872000, 51.21],
-        [1495288884000, 134.62],
-        [1495488896000, 139.64],
-        [1495688984000, 134.62],
-        [1495888896000, 139.64]
-        ]
+    console.log(donnees_annees);
+    var tst= donnees_annees;
 
     
     
     function euroFormatter(v, axis) {
         return v.toFixed(axis.tickDecimals) + "%";
     }
-    console.log(donnees_annees);
+
     function doPlot(position) {
         $.plot($("#flot-line-chart-multi"), [{
-            data: donnees_annees,
+            data: tst,
             label: "test",
             yaxis: 1
         }], {
@@ -224,7 +218,7 @@ $(function() {
                 mode: 'time'
             }],
             yaxes: [{
-                min: 0
+                min: 10
             }, {
                 // align if we are to the right
                 alignTicksWithAxis: position == "right" ? 1 : null,
