@@ -42,10 +42,7 @@ function unix_timestamp($date)
 
 
 	$str="";
-	$str .= '{';
-	$str .= '"';
-	$str .= 'niveau';
-	$str .= '":{label:"niveau eau",data :[';
+	$str .= '{"niveau":{label:"niveau eau",data:[';
 	
 
 
@@ -66,7 +63,8 @@ function unix_timestamp($date)
     $str .= $b;
     $str .= ']';
     $str .= ']';
-    $str .= '}}';
+    $str .= '}';
+    $str .= '}';
 	
 	echo $str;
 
