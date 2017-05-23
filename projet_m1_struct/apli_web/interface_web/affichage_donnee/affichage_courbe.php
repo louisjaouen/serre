@@ -38,7 +38,7 @@ function unix_timestamp($date)
 	    die('Erreur : ' . $e->getMessage());
 	}
 
-	$rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur = 1 ORDER BY date_valeur  DESC LIMIT 0,100 ');
+	$rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur = 1 ORDER BY date_valeur  DESC LIMIT 0,10 ');
 
 
 	$str="";
@@ -72,7 +72,7 @@ function unix_timestamp($date)
 	$str .= '"';
 	$str .= 'ph';
 	$str .= '":{label:"niveau pH",data :[';
-	$rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur = 2 ORDER BY date_valeur  DESC LIMIT 0,100 ');
+	$rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur = 2 ORDER BY date_valeur  DESC LIMIT 0,10 ');
 	while($donnees= $rep->fetch()){
 	
 		$str .= '[';
@@ -97,7 +97,7 @@ function unix_timestamp($date)
 	$str .= '"';
 	$str .= 'luminosite';
 	$str .= '":{label:"luminosite en Lux",data :[';
-	$rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur = 3 ORDER BY date_valeur  DESC LIMIT 0,100 ');
+	$rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur = 3 ORDER BY date_valeur  DESC LIMIT 0,10 ');
 	while($donnees= $rep->fetch()){
 	
 		$str .= '[';
@@ -122,7 +122,7 @@ function unix_timestamp($date)
 	$str .= '"';
 	$str .= 'eau';
 	$str .= '":{label:"temperature eau",data :[';
-	$rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur = 4 ORDER BY date_valeur  DESC LIMIT 0,100 ');
+	$rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur = 4 ORDER BY date_valeur  DESC LIMIT 0,10 ');
 	while($donnees= $rep->fetch()){
 	
 		$str .= '[';
@@ -147,7 +147,7 @@ function unix_timestamp($date)
 	$str .= '"';
 	$str .= 'air';
 	$str .= '":{label:"temperature air",data :[';
-	$rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur = 5 ORDER BY date_valeur  DESC LIMIT 0,100 ');
+	$rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur = 5 ORDER BY date_valeur  DESC LIMIT 0,10 ');
 	while($donnees= $rep->fetch()){
 	
 		$str .= '[';
@@ -171,7 +171,7 @@ function unix_timestamp($date)
 	$str .= '"';
 	$str .= 'humi';
 	$str .= '":{label:"humidité en %",data :[';
-	$rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur = 6 ORDER BY date_valeur  DESC LIMIT 0,100 ');
+	$rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur = 6 ORDER BY date_valeur  DESC LIMIT 0,10 ');
 	while($donnees= $rep->fetch()){
 	
 		$str .= '[';
@@ -196,7 +196,7 @@ function unix_timestamp($date)
 	$str .= '"';
 	$str .= 'sali';
 	$str .= '":{label:"salinité",data :[';
-	$rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur = 7 ORDER BY date_valeur  DESC LIMIT 0,100 ');
+	$rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur = 7 ORDER BY date_valeur  DESC LIMIT 0,10 ');
 	while($donnees= $rep->fetch()){
 	
 		$str .= '[';
@@ -214,7 +214,7 @@ function unix_timestamp($date)
     $str .= $b;
     $str .= ']';
     $str .= ']';
-    $str .= '}}'
+    $str .= '}}';
 	
 	echo $str;
 
