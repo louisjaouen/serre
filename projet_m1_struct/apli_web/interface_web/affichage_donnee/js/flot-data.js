@@ -188,52 +188,7 @@ $(function() {
           var donnees_annees = http.responseText;
           if (donnees_annees !== false)
           {
-
-            function euroFormatter(v, axis) {
-                return v.toFixed(axis.tickDecimals) + "%";
-            }
-
-            function doPlot(position) {
-                $.plot($("#flot-line-chart-multi"), [{
-                    data: donnees_annees,
-                    label: "test",
-                    yaxis: 1
-                }], {
-                    xaxes: [{
-                        mode: 'time'
-                    }],
-                    yaxes: [{
-                        min: 0
-                    }, {
-                        // align if we are to the right
-                        alignTicksWithAxis: position == "right" ? 1 : null,
-                        position: position,
-                        tickFormatter: euroFormatter
-                    }],
-                    legend: {
-                        position: 'sw'
-                    },
-                    grid: {
-                        hoverable: true //IMPORTANT! this is needed for tooltip to work
-                    },
-                    tooltip: true,
-                    tooltipOpts: {
-                        content: "%s for %x was %y",
-                        xDateFormat: "%y-%0m-%0d",
-
-                        onHover: function(flotItem, $tooltipEl) {
-                            // console.log(flotItem, $tooltipEl);
-                        }
-                    }
-
-                });
-            }
-
-            doPlot("right");
-
-            $("button").click(function() {
-                doPlot($(this).text());
-            });
+                console.log(donnees_annees);
                 
           }
           else
@@ -249,7 +204,51 @@ $(function() {
     });
     http.send(null);
 
-    
+    function euroFormatter(v, axis) {
+        return v.toFixed(axis.tickDecimals) + "%";
+    }
+
+    function doPlot(position) {
+        $.plot($("#flot-line-chart-multi"), [{
+            data: tst,
+            label: "test",
+            yaxis: 1
+        }], {
+            xaxes: [{
+                mode: 'time'
+            }],
+            yaxes: [{
+                min: 0
+            }, {
+                // align if we are to the right
+                alignTicksWithAxis: position == "right" ? 1 : null,
+                position: position,
+                tickFormatter: euroFormatter
+            }],
+            legend: {
+                position: 'sw'
+            },
+            grid: {
+                hoverable: true //IMPORTANT! this is needed for tooltip to work
+            },
+            tooltip: true,
+            tooltipOpts: {
+                content: "%s for %x was %y",
+                xDateFormat: "%y-%0m-%0d",
+
+                onHover: function(flotItem, $tooltipEl) {
+                    // console.log(flotItem, $tooltipEl);
+                }
+            }
+
+        });
+    }
+
+    doPlot("right");
+
+    $("button").click(function() {
+        doPlot($(this).text());
+    });
 });
 
 
