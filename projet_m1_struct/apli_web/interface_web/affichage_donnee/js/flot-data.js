@@ -234,7 +234,7 @@ $(function() {
         }
     };
     console.log(datasets);
-    console.log(donnees_annees);
+   
 
     // hard-code color indices to prevent them from shifting as
     // countries are turned on/off
