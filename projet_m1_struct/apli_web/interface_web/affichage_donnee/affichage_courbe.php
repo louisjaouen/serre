@@ -46,9 +46,6 @@ function unix_timestamp($date)
 	$str .= '"';
 	$str .= 'niveau';
 	$str .= '":{label:"niveau eau",data :[';
-	
-
-
 	while($donnees= $rep->fetch()){
 	
 		$str .= '[';
@@ -66,7 +63,6 @@ function unix_timestamp($date)
     $str .= $b;
     $str .= ']';
     $str .= ']';
-
     $str .= '},';
 
 	$str .= '"';
@@ -90,9 +86,8 @@ function unix_timestamp($date)
     $str .= $b;
     $str .= ']';
     $str .= ']';
-
-
     $str .= '},';
+
 	$str .= '"';
 	$str .= 'luminosite';
 	$str .= '":{label:"luminosite en Lux",data :[';
@@ -114,8 +109,6 @@ function unix_timestamp($date)
     $str .= $b;
     $str .= ']';
     $str .= ']';
-
-
     $str .= '},';
 	
 	$str .= '"';
@@ -188,8 +181,6 @@ function unix_timestamp($date)
     $str .= $b;
     $str .= ']';
     $str .= ']';
-
-
     $str .= '},';
 	
 	$str .= '"';
@@ -213,7 +204,7 @@ function unix_timestamp($date)
     $str .= $b;
     $str .= ']';
     $str .= ']';
-    $str .= '}}';
+    $str .= '} }';
 	
 	echo $str;
 
