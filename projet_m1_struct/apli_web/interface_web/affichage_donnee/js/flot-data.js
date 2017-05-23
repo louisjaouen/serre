@@ -215,7 +215,7 @@ $(function() {
             yaxis: 1
         }], {
             xaxes: [{
-                mode: 'time'
+                tickDecimals: 0
             }],
             yaxes: [{
                 min: 10

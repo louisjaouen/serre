@@ -43,13 +43,14 @@ function unix_timestamp($date)
 
 	$str="";
 	$str .= '[';
-	
+	$i =0;
 
 
 	while($donnees= $rep->fetch()){
+		$i++;
 		$str .= '[';
-		$a = unix_timestamp($donnees['date_valeur']);
-	    $str .= unix_timestamp($donnees['date_valeur']);
+		$a = $i;//unix_timestamp($donnees['date_valeur']);
+	    $str .= $i;//unix_timestamp($donnees['date_valeur']);
 	    $str .= '000,';
 	    $b = $donnees['value'];
 	    $str .= $donnees['value'];
