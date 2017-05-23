@@ -2,7 +2,7 @@ var donnees_annees;
 
 var http = createRequestObject();
 
-http.open('GET', '../affichage_donnee/test_donnee_sur_un_an.php', true);
+http.open('GET', '../affichage_donnee/test_donnee_sur_un_an.php', false);
 http.onreadystatechange = (function ()
 {
   if (http.readyState == 4)
