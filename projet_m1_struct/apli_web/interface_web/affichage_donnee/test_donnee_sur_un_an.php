@@ -38,7 +38,7 @@ if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION[
 
 	while($donnees= $rep->fetch()){
 		$str .= '[';
-		$format = '%Y-%m-%d %H:%M:%S,%u'
+		$format = '%Y-%m-%d %H:%M:%S,%u';
 		$a = strptime($donnees['date_valeur'], $format);
 	    $str .= $a;
 	    $str .= ',';
