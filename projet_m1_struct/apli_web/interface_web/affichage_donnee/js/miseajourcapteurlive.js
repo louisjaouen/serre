@@ -100,9 +100,23 @@ function doItOnInterval(nb_capteur)
                 //modifier texte
                 valeur_capteur =  Math.round10(parseFloat(donnee.valeur),-1);
                 //modifier le dessin
-                document.getElementById("watertext").innerHTML = "niveau d'eau : " + valeur_capteur + "cm";
-                document.getElementById("waterimg").setAttribute("height",3*valeur_capteur);
-                document.getElementById("waterimg").setAttribute("y",89+(350-3*valeur_capteur));
+                if(valeur_capteur==0){
+                  document.getElementById("watertext").innerHTML = "niveau d'eau trop bas !" ;
+                  document.getElementById("waterimg").setAttribute("height",3*25);
+                  document.getElementById("waterimg").setAttribute("y",89+(350-3*25));
+                }else if(valeur_capteur==1){
+                  document.getElementById("watertext").innerHTML = "niveau d'eau OK" ;
+                  document.getElementById("waterimg").setAttribute("height",3*50);
+                  document.getElementById("waterimg").setAttribute("y",89+(350-3*50));
+                }else if(valeur_capteur==2){
+                  document.getElementById("watertext").innerHTML = "niveau d'eau trop haut !" ;
+                  document.getElementById("waterimg").setAttribute("height",3*100);
+                  document.getElementById("waterimg").setAttribute("y",89+(350-3*100));
+                }else{
+                  document.getElementById("watertext").innerHTML = "probléme" ;
+                  document.getElementById("waterimg").setAttribute("height",3*0);
+                  document.getElementById("waterimg").setAttribute("y",89+(350-3*0));
+                }
               }else if(num_capteur==1){
                 valeur_capteur = Math.round10(parseFloat(donnee.valeur),-1);
                 //modifier le dessin
