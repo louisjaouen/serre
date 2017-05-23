@@ -83,6 +83,44 @@ function unix_timestamp($date)
     $str .= ']';
     $str .= ']';
 
+    $str .= '},"lumi":{"label":"luminosité","data":[';
+    $rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur = 3 ORDER BY date_valeur  DESC LIMIT 0,100 ');
+    while($donnees= $rep->fetch()){
+	
+		$str .= '[';
+		$a = unix_timestamp($donnees['date_valeur']);
+	    $str .= unix_timestamp($donnees['date_valeur']);
+	    $str .= '000, ';
+	    $b = $donnees['value'];
+	    $str .= $donnees['value'];
+	    $str .= ']';
+	    $str .= ', ';
+	}
+	$str .= '[';
+    $str .= $a;
+    $str .= '000, ';
+    $str .= $b;
+    $str .= ']';
+    $str .= ']';
+    $str .= '},"eau":{"label":"température eau","data":[';
+    $rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur = 4 ORDER BY date_valeur  DESC LIMIT 0,100 ');
+    while($donnees= $rep->fetch()){
+	
+		$str .= '[';
+		$a = unix_timestamp($donnees['date_valeur']);
+	    $str .= unix_timestamp($donnees['date_valeur']);
+	    $str .= '000, ';
+	    $b = $donnees['value'];
+	    $str .= $donnees['value'];
+	    $str .= ']';
+	    $str .= ', ';
+	}
+	$str .= '[';
+    $str .= $a;
+    $str .= '000, ';
+    $str .= $b;
+    $str .= ']';
+    $str .= ']';
     $str .= '}';
 
     
