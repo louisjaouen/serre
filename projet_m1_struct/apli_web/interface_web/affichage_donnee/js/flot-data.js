@@ -270,20 +270,28 @@ $(function() {
         if (data.length > 0) {
             $.plot("#toggle", data, {
                 series: {
-                lines: {
-                    show: true
+                    lines: {
+                        show: true
+                    },
+                    points: {
+                        show: true
+                    }
                 },
-                points: {
-                    show: true
-                }
-            },
-            grid: {
-                hoverable: true //IMPORTANT! this is needed for tooltip to work
-            },yaxis: {
+                grid: {
+                    hoverable: true //IMPORTANT! this is needed for tooltip to work
+                },yaxis: {
                     
                 },
                 xaxis: {
                     tickDecimals: 0
+                },
+                tooltip: true,
+                tooltipOpts: {
+                    content: "'%s' of %x.1 is %y.4",
+                    shifts: {
+                        x: -60,
+                        y: 25
+                    }
                 }
             });
         }
