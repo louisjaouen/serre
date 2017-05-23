@@ -160,8 +160,8 @@ if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION[
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div class="flot-chart">
-                                <div id="toggle" class="flot-chart-content"></div>
-                                <p id="choices" style="float:right; width:135px;"></p>
+                                <div id="toggle" class="flot-chart-content" style="float:left; width:80%;"></div>
+                                <p id="choices" style="float:right; width:20%;"></p>
                             </div>
                         </div>
                         <!-- /.panel-body -->
