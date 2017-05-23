@@ -270,7 +270,7 @@ $(function() {
         if (data.length > 0) {
             $.plot("#toggle", data, {
                 yaxis: {
-                    min: 0
+                    
                 },
                 xaxis: {
                     tickDecimals: 0
