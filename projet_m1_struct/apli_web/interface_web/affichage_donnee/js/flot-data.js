@@ -189,7 +189,7 @@ $(function() {
               if (donnees_annees !== false)
               {
                     console.log(donnees_annees);
-                    
+                    tst = donnees_annees;
               }
               else
               {
@@ -210,7 +210,7 @@ $(function() {
 
     function doPlot(position) {
         $.plot($("#flot-line-chart-multi"), [{
-            data: tst2,
+            data: tst,
             label: "test",
             yaxis: 1
         }], {
