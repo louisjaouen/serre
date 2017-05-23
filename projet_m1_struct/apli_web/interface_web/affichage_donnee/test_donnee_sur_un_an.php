@@ -49,17 +49,17 @@ function unix_timestamp($date)
 	while($donnees= $rep->fetch()){
 		$i++;
 		$str .= '[';
-		$a = $i;//unix_timestamp($donnees['date_valeur']);
-	    $str .= $i;//unix_timestamp($donnees['date_valeur']);
-	    $str .= '000,';
+		$a = unix_timestamp($donnees['date_valeur']);
+	    $str .= unix_timestamp($donnees['date_valeur']);
+	    $str .= ', ';
 	    $b = $donnees['value'];
 	    $str .= $donnees['value'];
 	    $str .= ']';
-	    $str .= ',';
+	    $str .= ', ';
 	}
 	$str .= '[';
     $str .= $a;
-    $str .= '000,';
+    $str .= ', ';
     $str .= $b;
     $str .= ']';
     $str .= ']';
