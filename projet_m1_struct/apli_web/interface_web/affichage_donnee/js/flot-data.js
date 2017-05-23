@@ -177,7 +177,33 @@ $(function() {
         [1495888896000, 139.64]
         ]
 
-   
+        var http = createRequestObject();
+  
+        http.open('GET', '../affichage_donnee/test_donnee_sur_un_an.php', true);
+        http.onreadystatechange = (function ()
+        {
+          if (http.readyState == 4)
+          {
+            if (http.status == 200)
+            {
+              var donnees_annees = http.responseText;
+              if (donnees_annees !== false)
+              {
+                    var tst2 = donnees_annees;
+                    
+              }
+              else
+              {
+                console.log('probléme d\'actualisation du DOM');
+              }
+            }
+            else
+            {
+              console.log('ereur requete ajax');
+            }
+          }
+        });
+        http.send(null);
 
     function euroFormatter(v, axis) {
         return v.toFixed(axis.tickDecimals) + "%";
@@ -185,7 +211,7 @@ $(function() {
 
     function doPlot(position) {
         $.plot($("#flot-line-chart-multi"), [{
-            data: tst,
+            data: tst2,
             label: "test",
             yaxis: 1
         }], {
