@@ -68,7 +68,7 @@ function unix_timestamp($date)
     $str .= ']';
 
     $str .= '},';
-	$str .= '{';
+	
 	$str .= '"';
 	$str .= 'ph';
 	$str .= '":{label:"niveau pH",data :[';
@@ -93,7 +93,7 @@ function unix_timestamp($date)
 
 
     $str .= '},';
-	$str .= '{';
+	
 	$str .= '"';
 	$str .= 'luminosite';
 	$str .= '":{label:"luminosite en Lux",data :[';
@@ -118,7 +118,7 @@ function unix_timestamp($date)
 
 
     $str .= '},';
-	$str .= '{';
+	
 	$str .= '"';
 	$str .= 'eau';
 	$str .= '":{label:"temperature eau",data :[';
@@ -143,7 +143,7 @@ function unix_timestamp($date)
 
 
     $str .= '},';
-	$str .= '{';
+	
 	$str .= '"';
 	$str .= 'air';
 	$str .= '":{label:"temperature air",data :[';
@@ -167,7 +167,7 @@ function unix_timestamp($date)
     $str .= ']';
 
     $str .= '},';
-	$str .= '{';
+	
 	$str .= '"';
 	$str .= 'humi';
 	$str .= '":{label:"humidité en %",data :[';
@@ -192,7 +192,7 @@ function unix_timestamp($date)
 
 
     $str .= '},';
-	$str .= '{';
+	
 	$str .= '"';
 	$str .= 'sali';
 	$str .= '":{label:"salinité",data :[';
