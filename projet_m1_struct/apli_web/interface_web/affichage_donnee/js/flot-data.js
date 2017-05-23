@@ -26,7 +26,7 @@ http.onreadystatechange = (function ()
   }
 });
 http.send(null);
-
+console.log(donnees_annees);
 
 
 //Flot Moving Line Chart
@@ -208,7 +208,7 @@ $(function() {
         ]
 
     
-    console.log(donnees_annees);
+    
     function euroFormatter(v, axis) {
         return v.toFixed(axis.tickDecimals) + "%";
     }
