@@ -12,7 +12,7 @@ http.onreadystatechange = (function ()
       donnees_annees = JSON.parse(http.responseText);
       if (donnees_annees !== false)
       {
-            console.log(donnees_annees);
+            
             
       }
       else
@@ -233,8 +233,7 @@ $(function() {
             data: [[1988, 4382], [1989, 4498], [1990, 4535], [1991, 4398], [1992, 4766], [1993, 4441], [1994, 4670], [1995, 4217], [1996, 4275], [1997, 4203], [1998, 4482], [1999, 4506], [2000, 4358], [2001, 4385], [2002, 5269], [2003, 5066], [2004, 5194], [2005, 4887], [2006, 4891]]
         }
     };
-    console.log(datasets);
-    console.log(datasets);
+    
 
     // hard-code color indices to prevent them from shifting as
     // countries are turned on/off
