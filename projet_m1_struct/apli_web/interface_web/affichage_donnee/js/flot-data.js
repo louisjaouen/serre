@@ -167,8 +167,11 @@ $(function() {
 
 //Flot Multiple Axes Line Chart
 $(function() {
-    
+    <?php
+        $test = "[[1168902000000, 51.21],[1168988400000, 52.24],[1214344800000, 134.62],[1214431200000, 139.64]]";
+    ?>
 
+    var tst ='<?php echo $test;?>';
 
 
     var oilprices = [
@@ -1680,6 +1683,10 @@ $(function() {
             data: exchangerates2,
             label: "luminosité",
             yaxis: 3
+        }, {
+            data: tst,
+            label: "test",
+            yaxis: 4
         }], {
             xaxes: [{
                 mode: 'time'
