@@ -25,8 +25,9 @@ http.onreadystatechange = (function ()
     }
   }
 });
-http.send(null);
 console.log(donnees_annees);
+http.send(null);
+
 
 
 //Flot Moving Line Chart
