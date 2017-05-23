@@ -269,7 +269,17 @@ $(function() {
 
         if (data.length > 0) {
             $.plot("#toggle", data, {
-                yaxis: {
+                series: {
+                lines: {
+                    show: true
+                },
+                points: {
+                    show: true
+                }
+            },
+            grid: {
+                hoverable: true //IMPORTANT! this is needed for tooltip to work
+            },yaxis: {
                     
                 },
                 xaxis: {
