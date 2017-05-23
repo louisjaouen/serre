@@ -68,7 +68,7 @@ function unix_timestamp($date)
     $str .= ']';
 
     $str .= '},';
-	
+
 	$str .= '"';
 	$str .= 'ph';
 	$str .= '":{label:"niveau pH",data :[';
@@ -93,7 +93,6 @@ function unix_timestamp($date)
 
 
     $str .= '},';
-	
 	$str .= '"';
 	$str .= 'luminosite';
 	$str .= '":{label:"luminosite en Lux",data :[';
