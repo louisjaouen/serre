@@ -1164,7 +1164,7 @@ $(function() {
 
     function doPlot(position) {
         $.plot($("#flot-line-chart-multi"), [{
-            data: oilprices,
+            data: donnees_annees,
             label: "Oil price ($)"
         }, {
             data: exchangerates,
