@@ -288,7 +288,7 @@ $(function() {
                 tooltip: true,
                 tooltipOpts: {
                     content: "%s for %x was %y",
-                    xDateFormat: "%y-%0m-%0d",
+                    xDateFormat: "%y-%m-%d",
 
                     onHover: function(flotItem, $tooltipEl) {
                         // console.log(flotItem, $tooltipEl);
