@@ -24,7 +24,6 @@ http.onreadystatechange = (function ()
       console.log('ereur requete ajax');
     }
   }
-  console.log(donnees_annees);
 });
 http.send(null);
 
