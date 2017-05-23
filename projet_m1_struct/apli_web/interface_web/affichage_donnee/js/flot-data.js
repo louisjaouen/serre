@@ -26,9 +26,8 @@ http.onreadystatechange = (function ()
     }
   }
 });
-console.log(donnees_annees);
 http.send(null);
-console.log(donnees_annees);
+
 
 
 //Flot Moving Line Chart
@@ -214,10 +213,10 @@ $(function() {
     function euroFormatter(v, axis) {
         return v.toFixed(axis.tickDecimals) + "%";
     }
-
+    console.log(donnees_annees);
     function doPlot(position) {
         $.plot($("#flot-line-chart-multi"), [{
-            data: tst,
+            data: donnees_annees,
             label: "test",
             yaxis: 1
         }], {
