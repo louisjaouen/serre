@@ -167,82 +167,89 @@ $(function() {
 
 //Flot Multiple Axes Line Chart
 $(function() {
-    var donnees_annees;
     
+    var tst= [
+        [1495088872000, 51.21],
+        [1495288884000, 134.62],
+        [1495488896000, 139.64],
+        [1495688984000, 134.62],
+        [1495888896000, 139.64]
+        ]
 
-        var http = createRequestObject();
-  
-        http.open('GET', '../affichage_donnee/test_donnee_sur_un_an.php', true);
-        http.onreadystatechange = (function ()
+    var http = createRequestObject();
+
+    http.open('GET', '../affichage_donnee/test_donnee_sur_un_an.php', true);
+    http.onreadystatechange = (function ()
+    {
+      if (http.readyState == 4)
+      {
+        if (http.status == 200)
         {
-          if (http.readyState == 4)
+          var donnees_annees = http.responseText;
+          if (donnees_annees !== false)
           {
-            if (http.status == 200)
-            {
-              donnees_annees = http.responseText;
-              if (donnees_annees !== false)
-              {
-                    console.log(donnees_annees);
-                    
-              }
-              else
-              {
-                console.log('probléme d\'actualisation du DOM');
-              }
+
+            function euroFormatter(v, axis) {
+                return v.toFixed(axis.tickDecimals) + "%";
             }
-            else
-            {
-              console.log('ereur requete ajax');
+
+            function doPlot(position) {
+                $.plot($("#flot-line-chart-multi"), [{
+                    data: donnees_annees,
+                    label: "test",
+                    yaxis: 1
+                }], {
+                    xaxes: [{
+                        mode: 'time'
+                    }],
+                    yaxes: [{
+                        min: 0
+                    }, {
+                        // align if we are to the right
+                        alignTicksWithAxis: position == "right" ? 1 : null,
+                        position: position,
+                        tickFormatter: euroFormatter
+                    }],
+                    legend: {
+                        position: 'sw'
+                    },
+                    grid: {
+                        hoverable: true //IMPORTANT! this is needed for tooltip to work
+                    },
+                    tooltip: true,
+                    tooltipOpts: {
+                        content: "%s for %x was %y",
+                        xDateFormat: "%y-%0m-%0d",
+
+                        onHover: function(flotItem, $tooltipEl) {
+                            // console.log(flotItem, $tooltipEl);
+                        }
+                    }
+
+                });
             }
+
+            doPlot("right");
+
+            $("button").click(function() {
+                doPlot($(this).text());
+            });
+                
           }
-        });
-        http.send(null);
-
-    function euroFormatter(v, axis) {
-        return v.toFixed(axis.tickDecimals) + "%";
-    }
-
-    function doPlot(position) {
-        $.plot($("#flot-line-chart-multi"), [{
-            data: donnees_annees,
-            label: "test",
-            yaxis: 1
-        }], {
-            xaxes: [{
-                mode: 'time'
-            }],
-            yaxes: [{
-                min: 0
-            }, {
-                // align if we are to the right
-                alignTicksWithAxis: position == "right" ? 1 : null,
-                position: position,
-                tickFormatter: euroFormatter
-            }],
-            legend: {
-                position: 'sw'
-            },
-            grid: {
-                hoverable: true //IMPORTANT! this is needed for tooltip to work
-            },
-            tooltip: true,
-            tooltipOpts: {
-                content: "%s for %x was %y",
-                xDateFormat: "%y-%0m-%0d",
-
-                onHover: function(flotItem, $tooltipEl) {
-                    // console.log(flotItem, $tooltipEl);
-                }
-            }
-
-        });
-    }
-
-    doPlot("right");
-
-    $("button").click(function() {
-        doPlot($(this).text());
+          else
+          {
+            console.log('probléme d\'actualisation du DOM');
+          }
+        }
+        else
+        {
+          console.log('ereur requete ajax');
+        }
+      }
     });
+    http.send(null);
+
+    
 });
 
 
