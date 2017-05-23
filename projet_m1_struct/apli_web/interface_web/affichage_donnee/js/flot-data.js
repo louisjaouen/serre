@@ -1,7 +1,3 @@
-<?php
-        $test = "[[1168902000000, 51.21],[1168988400000, 52.24],[1214344800000, 134.62],[1214431200000, 139.64]]";
-?>
-
 //Flot Moving Line Chart
 var y=0;
 var i=0;
@@ -172,8 +168,11 @@ $(function() {
 //Flot Multiple Axes Line Chart
 $(function() {
     
-
-    var tst ='<?php echo $test;?>';
+    var tst= [
+        [1168902000000, 51.21],
+        [1214344800000, 134.62],
+        [1214431200000, 139.64]
+        ]
 
 
     var oilprices = [
