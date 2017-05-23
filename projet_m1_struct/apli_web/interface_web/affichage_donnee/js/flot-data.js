@@ -212,13 +212,13 @@ $(function() {
         $.plot($("#flot-line-chart-multi"), [{
             data: tst,
             label: "test",
-            yaxis: 1
+            yaxis: 2
         }], {
             xaxes: [{
                 tickDecimals: 0
             }],
             yaxes: [{
-                min: 10
+                min: 0
             }, {
                 // align if we are to the right
                 alignTicksWithAxis: position == "right" ? 1 : null,
