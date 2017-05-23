@@ -28,7 +28,7 @@ if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION[
 	    die('Erreur : ' . $e->getMessage());
 	}
 
-	$rep = $bdd->query('SELECT * FROM valeur ORDER BY date_valeur  DESC LIMIT 0,181440000 ');
+	$rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur = 1 ORDER BY date_valeur  DESC LIMIT 0,181440000 ');
 
 
 	$str="";
