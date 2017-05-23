@@ -9,7 +9,7 @@ http.onreadystatechange = (function ()
   {
     if (http.status == 200)
     {
-      donnees_annees = JSON.parse(http.responseText);
+      donnees_annees = http.responseText;
       if (donnees_annees !== false)
       {
             console.log(donnees_annees);
