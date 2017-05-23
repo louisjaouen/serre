@@ -1,6 +1,6 @@
 
 var http = createRequestObject();
-
+var donnees_annees;
 http.open('GET', '../affichage_donnee/test_donnee_sur_un_an.php', true);
 http.onreadystatechange = (function ()
 {
