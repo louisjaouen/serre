@@ -15,6 +15,16 @@ if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION[
   $_SESSION['nombre_de_valeur']=100;
 }
 
+function unix_timestamp($date)
+{
+	$date = str_replace(array(' ', ':'), '-', $date);
+	$c    = explode('-', $date);
+	$c    = array_pad($c, 6, 0);
+	array_walk($c, 'intval');
+ 
+	return mktime($c[3], $c[4], $c[5], $c[1], $c[2], $c[0]);
+}
+
 	header('Content-Type: text/html; charset: UTF-8');
 
 
@@ -38,9 +48,7 @@ if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION[
 
 	while($donnees= $rep->fetch()){
 		$str .= '[';
-		$format = '%Y-%m-%d %H:%M:%S,%u';
-		$a = strptime($donnees['date_valeur'], $format);
-	    $str .= $a;
+	    $str .= unix_timestamp($donnees['date_valeur']);
 	    $str .= ',';
 	    $str .= $donnees['value'];
 	    $str .= ']';
