@@ -50,6 +50,10 @@ if (isset($_POST['prenom'])&& isset($_POST['motdepasse'])) //Oublie d'un champ
           if($user)//Si le compte existe on authentifie
           {
              //Création des variables de session 
+            $_SESSION['login'] = $user_data->displayName;
+            header('Location: http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/html/tableau.php');
+            exit();
+          
           }
           else
           {
@@ -57,7 +61,7 @@ if (isset($_POST['prenom'])&& isset($_POST['motdepasse'])) //Oublie d'un champ
             $_SESSION['login'] = $user_data->displayName;
              /*Sinon on redirige le visiteur vers le formulaire d'inscription en récupérant au préalable les données qui nous intéressent en vue de pré-remplir les champs*/
              header('Location: http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/html/tableau.php');
-      exit();
+            exit();
           }
        }
     catch( Exception $e ){  
