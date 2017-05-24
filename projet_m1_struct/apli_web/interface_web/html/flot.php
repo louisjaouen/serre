@@ -149,9 +149,9 @@ if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION[
                                 <p id="choices" style="float:right; width:20%;"></p>
                             </div>
                             <p>Zoom sur:
-                            <button id="journée">journée</button>
+                            <button id="journee">journée</button>
                             <button id="semaine">semaine</button>
-                            <button id="année">année</button>
+                            <button id="annee">année</button>
                             </p>
                         </div>
                         <!-- /.panel-body -->

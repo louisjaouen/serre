@@ -266,7 +266,149 @@ $(function() {
         }
     }
 
-    plotAccordingToChoices();
+    $("#journee").click(function () {
+        function plotAccordingToChoices() {
+
+            var data = [];
+
+            choiceContainer.find("input:checked").each(function () {
+                var key = $(this).attr("name");
+                if (key && donnees_annees[key]) {
+                    data.push(donnees_annees[key]);
+                }
+            });
+
+            if (data.length > 0) {
+                $.plot("#toggle", data, {
+                    series: {
+                        lines: {
+                            show: true
+                        },
+                        points: {
+                            show: false
+                        }
+                    },
+                    grid: {
+                        hoverable: true //IMPORTANT! this is needed for tooltip to work
+                    },yaxis: {
+                        
+                    },
+                    xaxis: {
+                        mode: 'time'
+                        min: (new Date(2017, 05, 22)).getTime(),
+                        max: (new Date(2017, 05, 23)).getTime(),
+                    },
+                    tooltip: true,
+                    tooltipOpts: {
+                        content: "%s for %x was %y",
+                        xDateFormat: "%d-%m-%y",
+
+                        onHover: function(flotItem, $tooltipEl) {
+                            // console.log(flotItem, $tooltipEl);
+                        }
+                    }
+                });
+            }
+        }
+        plotAccordingToChoices();
+    });
+
+    $("#semaine").click(function () {
+        function plotAccordingToChoices() {
+
+            var data = [];
+
+            choiceContainer.find("input:checked").each(function () {
+                var key = $(this).attr("name");
+                if (key && donnees_annees[key]) {
+                    data.push(donnees_annees[key]);
+                }
+            });
+
+            if (data.length > 0) {
+                $.plot("#toggle", data, {
+                    series: {
+                        lines: {
+                            show: true
+                        },
+                        points: {
+                            show: false
+                        }
+                    },
+                    grid: {
+                        hoverable: true //IMPORTANT! this is needed for tooltip to work
+                    },yaxis: {
+                        
+                    },
+                    xaxis: {
+                        mode: 'time'
+                        min: (new Date(2017, 05, 16)).getTime(),
+                        max: (new Date(2017, 05, 23)).getTime(),
+                    },
+                    tooltip: true,
+                    tooltipOpts: {
+                        content: "%s for %x was %y",
+                        xDateFormat: "%d-%m-%y",
+
+                        onHover: function(flotItem, $tooltipEl) {
+                            // console.log(flotItem, $tooltipEl);
+                        }
+                    }
+                });
+            }
+        }
+        plotAccordingToChoices();
+    });
+    $("#annee").click(function () {
+        function plotAccordingToChoices() {
+
+            var data = [];
+
+            choiceContainer.find("input:checked").each(function () {
+                var key = $(this).attr("name");
+                if (key && donnees_annees[key]) {
+                    data.push(donnees_annees[key]);
+                }
+            });
+
+            if (data.length > 0) {
+                $.plot("#toggle", data, {
+                    series: {
+                        lines: {
+                            show: true
+                        },
+                        points: {
+                            show: false
+                        }
+                    },
+                    grid: {
+                        hoverable: true //IMPORTANT! this is needed for tooltip to work
+                    },yaxis: {
+                        
+                    },
+                    xaxis: {
+                        mode: 'time'
+                        min: (new Date(2016, 05, 22)).getTime(),
+                        max: (new Date(2017, 05, 23)).getTime(),
+                    },
+                    tooltip: true,
+                    tooltipOpts: {
+                        content: "%s for %x was %y",
+                        xDateFormat: "%d-%m-%y",
+
+                        onHover: function(flotItem, $tooltipEl) {
+                            // console.log(flotItem, $tooltipEl);
+                        }
+                    }
+                });
+            }
+        }
+        plotAccordingToChoices();
+    });
+
+
+
+    //plotAccordingToChoices();
 
 });
 
