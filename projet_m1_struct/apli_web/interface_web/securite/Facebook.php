@@ -61,19 +61,18 @@ if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION[
                         <a href="http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/securite/login.php?provider=Google" title="Connexion Google">Google</a>
                         <a href="http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/securite/login.php?provider=Twitter" title="Connexion Facebook">Twitter</a>
                         <h2>ou</h2>
-                        <form role="form">
+                        <form method="post" action="login.php" role="form">
                             <fieldset>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                    <input class="form-control" placeholder="Password" name="motdepasse" type="password" value="">
                                 </div>
                                 
                                 <!-- Change this to a button or input when using this as a form -->
-                                <a href="index.html" class="btn btn-lg btn-success btn-block">connexion</a>
-                            </fieldset>
-                            
+                                </fieldset>
+                            <p><input type="submit" value="Inscription" /></p>
                         </form>
                         <!--<div id="status"></div>-->
                     </div>
