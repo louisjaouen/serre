@@ -17,6 +17,17 @@ if (isset($_POST['nom']) && isset($_POST['prenom'])&& isset($_POST['email'])&& i
 	    die('Erreur : ' . $e->getMessage());
 	}
 
+	$req = $bdd->prepare('INSERT INTO user(nom, prenom, droits, motdepasse, telephone) VALUES(:nom, :prenom, :droits, :motdepasse, :telephone)');
+	$req->execute(array(
+	    'nom' => $_POST['nom'],
+	    'prenom' => $_POST['prenom'],
+	    'droits' => 0,
+	    'motdepasse' => $_POST['motdepasse'],
+	    'telephone' => $_POST['telephone']
+	    ));
+	$message .= '  user ajouté';
+	$rep->closeCursor();
+	$bdd=null;
 
 }
 else //On check le mot de passe

@@ -31,9 +31,8 @@
                         <div id="my-signin" href="index.html"></div>
                         <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true" href="index.html"></div>
                         <h6>connectez vous vous avec :</h6>
-                        <a href="../securite/Google.php" title="Connexion Google">Google</a>
-                        <a href="../securite/Facebook.php" title="Connexion Facebook">Facebook</a>
-                        <a href="../securite/Twitter.php" title="Connexion Twitter">Twitter</a>
+                        <a href="http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/securite/login.php?provider=Google" title="Connexion Google">Google</a>
+                        <a href="http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/securite/login.php?provider=Twitter" title="Connexion Facebook">Twitter</a>
                         <h2>ou</h2>
                         <form method="post" action="newuser.php" role="form">
                             <fieldset>
