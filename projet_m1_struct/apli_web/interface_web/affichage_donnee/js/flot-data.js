@@ -265,6 +265,7 @@ $(function() {
             });
         }
     }
+    plotAccordingToChoices();
 
     $("#journee").click(function () {
         function plotAccordingToChoices() {
@@ -295,8 +296,10 @@ $(function() {
                     },
                     xaxis: {
                         mode: 'time',
+                        minTickSize: [1, "hour"],
                         min: (new Date(2017, 05, 22)).getTime(),
                         max: (new Date(2017, 05, 23)).getTime()
+                        twelveHourClock: false
                     },
                     tooltip: true,
                     tooltipOpts: {
@@ -342,6 +345,7 @@ $(function() {
                     },
                     xaxis: {
                         mode: 'time',
+                        minTickSize: [1, "day"],
                         min: (new Date(2017, 05, 16)).getTime(),
                         max: (new Date(2017, 05, 23)).getTime()
                     },
