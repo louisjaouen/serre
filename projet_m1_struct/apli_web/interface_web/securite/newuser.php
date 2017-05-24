@@ -3,12 +3,7 @@
 // On prolonge la session
 session_start();
 // On teste si la variable de session existe et contient une valeur
-if(empty($_SESSION['login'])) 
-{
-  // Si inexistante ou nulle, on redirige vers le formulaire de login
-  header('Location: http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/securite/Facebook.php');
-  exit();
-} 
+
 if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION['nombre_de_valeur'])) 
 {
   $_SESSION['bassin']=1;
@@ -34,13 +29,13 @@ if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION[
 	$message='';
     if (isset(var)($_POST['nom']) && isset($_POST['prenom'])&& isset($_POST['email'])&& isset($_POST['motdepasse'])&& isset($_POST['telephone']) ) //Oublie d'un champ
     {
-        $message = '<p>variable recu</p>';
+        $message = 'variable recu';
     }
     else //On check le mot de passe
     {
-        $message = '<p>variable non recu</p>';
+        $message = 'variable non recu';
     }
-    echo $message.'</div></body></html>';
+    echo $message;
 
 
 
