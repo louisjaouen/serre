@@ -64,7 +64,7 @@ if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION[
                         <form method="post" action="login.php" role="form">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                                    <input class="form-control" placeholder="prenom" name="prenom" type="name" >
                                 </div>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Password" name="motdepasse" type="password" value="">

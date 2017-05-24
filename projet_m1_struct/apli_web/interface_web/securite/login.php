@@ -1,12 +1,29 @@
 <?php
 session_start();
-if (isset($_POST['email'])&& isset($_POST['motdepasse'])) //Oublie d'un champ
+if (isset($_POST['prenom'])&& isset($_POST['motdepasse'])) //Oublie d'un champ
 {
+  echo "post recu";
+  try{
+          // Sous MAMP (Mac)
+          $bdd = new PDO('mysql:host=localhost;dbname=projet;charset=utf8', 'root', 'Louloudu29');
+          }
+  catch (Exception $e)
+  {
+      die('Erreur : ' . $e->getMessage());
+  }
+  $req = $bdd->prepare('SELECT nom, prenom FROM user WHERE prenom = ? AND motdepasse = ?');
+  $req->execute(array($_POST['prenom'], $_POST['motdepasse']));
+  while ($donnees = $req->fetch())
+  {
+    $_SESSION['login'] = $_POST['prenom'];
 
-  echo 'connexion';
-
-
-
+  }
+  
+  
+  $req->closeCursor();
+  $bdd=null;
+  header('Location: http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/securite/tableau.php');
+  exit();
 }else{
     if(isset($_REQUEST["provider"]))
     {
