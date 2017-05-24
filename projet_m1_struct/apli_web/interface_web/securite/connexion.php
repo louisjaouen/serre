@@ -80,24 +80,14 @@ if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION[
             </div>
         </div>
     </div>
-
     <!-- jQuery -->
     <script src="../../vendor/jquery/jquery.min.js"></script>
-
     <!-- Bootstrap Core JavaScript -->
     <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
-
-   
-
     <!-- Metis Menu Plugin JavaScript -->
     <script src="../../vendor/metisMenu/metisMenu.min.js"></script>
-
     <!-- Custom Theme JavaScript -->
     <script src="../js/sb-admin-2.js"></script>
     <script>
- 
-
-
 </body>
-
 </html>
