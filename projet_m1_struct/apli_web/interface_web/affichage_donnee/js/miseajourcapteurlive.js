@@ -101,7 +101,7 @@ function doItOnInterval(nb_capteur)
                 valeur_capteur =  Math.round10(parseFloat(donnee.valeur),-1);
                 //modifier le dessin
                 if(valeur_capteur==0){
-                  document.getElementById("watertext").innerHTML = "niveau d'eau trop bas !" ;
+                  document.getElementById("watertext").innerHTML = "trop bas !" ;
                   document.getElementById("waterimg").setAttribute("height",3*25);
                   document.getElementById("waterimg").setAttribute("y",89+(350-3*25));
                 }else if(valeur_capteur==1){
@@ -109,7 +109,7 @@ function doItOnInterval(nb_capteur)
                   document.getElementById("waterimg").setAttribute("height",3*50);
                   document.getElementById("waterimg").setAttribute("y",89+(350-3*50));
                 }else if(valeur_capteur==2){
-                  document.getElementById("watertext").innerHTML = "niveau d'eau trop haut !" ;
+                  document.getElementById("watertext").innerHTML = "trop haut !" ;
                   document.getElementById("waterimg").setAttribute("height",3*100);
                   document.getElementById("waterimg").setAttribute("y",89+(350-3*100));
                 }else{
