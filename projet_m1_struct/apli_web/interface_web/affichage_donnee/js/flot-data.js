@@ -190,7 +190,7 @@ $(function() {
         series[0].data = getData();
         plot.setData(series);
         plot.draw();
-    }, 10);
+    }, 1000);
 
 });
 
