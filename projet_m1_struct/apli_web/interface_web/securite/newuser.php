@@ -21,7 +21,7 @@ if (isset($_POST['nom']) && isset($_POST['prenom'])&& isset($_POST['email'])&& i
 	$req->execute(array(
 	    'nom' => $_POST['nom'],
 	    'prenom' => $_POST['prenom'],
-	    'droits' => 0,
+	    'droits' => '0',
 	    'motdepasse' => $_POST['motdepasse'],
 	    'telephone' => $_POST['telephone']
 	    ));
