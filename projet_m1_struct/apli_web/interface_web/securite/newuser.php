@@ -27,15 +27,15 @@ if (isset($_POST['nom']) && isset($_POST['prenom'])&& isset($_POST['email'])&& i
 	    ));
 	$message .= '  user ajouté';
 	echo $message;
-	$rep->closeCursor();
+	$req->closeCursor();
 	$bdd=null;
-
+	header('Location: http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/securite/Facebook.php');
+  	exit();
 }
 else //On check le mot de passe
 {
-    $message = '  variable non recu';
+    $message = 'pb lors de l\'inscription. réessayez ou connectez vous avec Google ou Twitter.;
 }
-echo $message;
 
 
 ?>
