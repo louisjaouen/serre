@@ -57,7 +57,7 @@ if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION[
 </head>
 
 <body>
-<script src="../affichage_donnee/js/flot-data.js"></script>
+
 
 
     <div id="wrapper">
@@ -190,6 +190,7 @@ if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION[
 
     <!-- Custom Theme JavaScript -->
     <script src="../js/sb-admin-2.js"></script>
+    <script src="../affichage_donnee/js/flot-data.js"></script>
 
 </body>
 
