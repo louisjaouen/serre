@@ -31,7 +31,7 @@
 
 </head>
 <body>
-<div class="col-lg-3 col-md-4">
+<div class="col-xs-6 col-lg-6 col-md-4">
     <div class="panel panel-primary">
         <div class="panel-heading">
             <div class="row">
