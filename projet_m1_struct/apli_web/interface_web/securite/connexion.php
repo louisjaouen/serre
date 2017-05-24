@@ -52,7 +52,7 @@ if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION[
             <div class="col-md-4 col-md-offset-4">
                 <div class="login-panel panel panel-default">
                     <div class="panel-heading">
-                        <h2 class="title"><a href="login.php" >connexion </a></h2> <h5>Si vous n'avez pas de compte, inscrivez vous <a href="signin.php">Inscription</a></h5>
+                        <h2 class="title"><a href="connexion.php" >connexion </a></h2> <h5>Si vous n'avez pas de compte, inscrivez vous <a href="signin.php">Inscription</a></h5>
                     </div>
                     <div class="panel-body">
                         <div id="my-signin" href="index.html"></div>
@@ -72,7 +72,7 @@ if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION[
                                 
                                 <!-- Change this to a button or input when using this as a form -->
                                 </fieldset>
-                            <p><input type="submit" value="Inscription" /></p>
+                            <p><input type="submit" value="Connexion" /></p>
                         </form>
                         <!--<div id="status"></div>-->
                     </div>
