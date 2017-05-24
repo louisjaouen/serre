@@ -35,13 +35,13 @@
                         <a href="../securite/Facebook.php" title="Connexion Facebook">Facebook</a>
                         <a href="../securite/Twitter.php" title="Connexion Twitter">Twitter</a>
                         <h2>ou</h2>
-                        <form role="form">
+                        <form method="post" action="newuser.php" role="form">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Nom" name="nom" type="name" autofocus>
+                                    <input class="form-control" placeholder="nom" name="nom" type="name" id="nom" autofocus>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Prénom" name="prenom" type="name" >
+                                    <input class="form-control" placeholder="prenom" name="prenom" type="name" >
                                 </div>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="E-mail" name="email" type="email" >
@@ -55,9 +55,9 @@
                                 </div>
                                 
                                 <!-- Change this to a button or input when using this as a form -->
-                                <a href="index.html" class="btn btn-lg btn-success btn-block">Inscription</a>
+                                
                             </fieldset>
-                            
+                            <p><input type="submit" value="Inscription" /></p>
                         </form>
                         <!--<div id="status"></div>-->
                     </div>
