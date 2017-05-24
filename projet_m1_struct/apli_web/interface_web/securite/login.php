@@ -22,8 +22,10 @@ if (isset($_POST['prenom'])&& isset($_POST['motdepasse'])) //Oublie d'un champ
   
   $req->closeCursor();
   $bdd=null;
-  header('Location: http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/securite/tableau.php');
-  exit();
+  if(isset($_SESSION['login'])){
+    header('Location: http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/html/tableau.php');
+    exit();
+  }
 }else{
     if(isset($_REQUEST["provider"]))
     {
