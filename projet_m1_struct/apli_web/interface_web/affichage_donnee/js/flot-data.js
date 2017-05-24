@@ -298,7 +298,7 @@ $(function() {
                         mode: 'time',
                         minTickSize: [1, "hour"],
                         min: (new Date(2017, 05, 22)).getTime(),
-                        max: (new Date(2017, 05, 23)).getTime()
+                        max: (new Date(2017, 05, 23)).getTime(),
                         twelveHourClock: false
                     },
                     tooltip: true,
