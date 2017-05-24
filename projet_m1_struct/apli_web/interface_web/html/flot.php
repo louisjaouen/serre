@@ -186,11 +186,11 @@ if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION[
     <script src="../../vendor/flot/jquery.flot.resize.js"></script>
     <script src="../../vendor/flot/jquery.flot.time.js"></script>
     <script src="../../vendor/flot-tooltip/jquery.flot.tooltip.min.js"></script>
-    
+    <script src="../affichage_donnee/js/flot-data.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="../js/sb-admin-2.js"></script>
-    <script src="../affichage_donnee/js/flot-data.js"></script>
+    
 
 </body>
 
