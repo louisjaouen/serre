@@ -25,7 +25,7 @@
             <div class="col-md-4 col-md-offset-4">
                 <div class="login-panel panel panel-default">
                     <div class="panel-heading">
-                        <h2 class="title"><a href="signin.html" >Inscription</a></h2> <h5>si vous avez déjà un compte connectez vous <a href="Facebook.php">connexion</a></h5>
+                        <h2 class="title"><a href="signin.html" >Inscription</a></h2> <h5>si vous avez déjà un compte connectez vous <a href="connexion.php">connexion</a></h5>
                     </div>
                     <div class="panel-body">
                         <div id="my-signin" href="index.html"></div>
