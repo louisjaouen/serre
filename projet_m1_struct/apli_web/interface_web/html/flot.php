@@ -122,7 +122,7 @@ if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION[
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Line Chart Example
+                            Exemple pH actualisation Live
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -140,7 +140,7 @@ if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION[
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            plot toggle
+                            graphique de tous les capteurs
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
