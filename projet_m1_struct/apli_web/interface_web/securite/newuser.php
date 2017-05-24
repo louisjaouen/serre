@@ -26,6 +26,7 @@ if (isset($_POST['nom']) && isset($_POST['prenom'])&& isset($_POST['email'])&& i
 	    'telephone' => $_POST['telephone']
 	    ));
 	$message .= '  user ajouté';
+	echo $message;
 	$rep->closeCursor();
 	$bdd=null;
 
