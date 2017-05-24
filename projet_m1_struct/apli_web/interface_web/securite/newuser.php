@@ -34,7 +34,7 @@ if (isset($_POST['nom']) && isset($_POST['prenom'])&& isset($_POST['email'])&& i
 }
 else //On check le mot de passe
 {
-    $message = 'pb lors de l\'inscription. réessayez ou connectez vous avec Google ou Twitter.;
+    $message = 'pb lors de l\'inscription. réessayez ou connectez vous avec Google ou Twitter.';
 }
 
 
