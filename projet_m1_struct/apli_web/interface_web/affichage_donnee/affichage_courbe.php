@@ -38,7 +38,7 @@ function unix_timestamp($date)
 	    die('Erreur : ' . $e->getMessage());
 	}
 
-	$rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur = 1 ORDER BY date_valeur  DESC LIMIT 0,16100000 ');
+	$rep = $bdd->query('SELECT * FROM valeur WHERE id_capteur = 1 ORDER BY date_valeur  DESC LIMIT 0,161000 ');
 
 
 	$str="";
