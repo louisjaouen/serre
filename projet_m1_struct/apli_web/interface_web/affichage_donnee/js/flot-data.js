@@ -394,8 +394,8 @@ $(function() {
                     xaxis: {
                         mode: 'time',
                         minTickSize: [1, "month"],
-                        min: (new Date(2016, 04, 22)).getTime(),
-                        max: (new Date(2017, 04, 23)).getTime(),
+                        min: (new Date(2016, 04, 28)).getTime(),
+                        max: (new Date(2017, 04, 29)).getTime(),
                         twelveHourClock: false
                     },
                     tooltip: true,
