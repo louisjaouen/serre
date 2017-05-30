@@ -31,7 +31,7 @@
 
 </head>
 <body>
-<div class="col-lg-3 col-md-4">
+<div class="col-xs-6 col-lg-3 col-md-3">
     <div class="panel panel-primary">
         <div class="panel-heading">
             <div class="row">
@@ -45,13 +45,7 @@
             <span class="pull-right"><h3 id="salitext">salinité</h3></span>
             </div>
         </div>
-        <a href="#">
-        <div class="panel-footer">
-            <span class="pull-left">View Details</span>
-                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                    <div class="clearfix"></div>
-        </div>
-        </a>
+        
         </div>
     </div>
 </div>
