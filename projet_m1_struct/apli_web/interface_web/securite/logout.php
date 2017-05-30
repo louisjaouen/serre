@@ -6,7 +6,7 @@ if(empty($_SESSION['login']))
 {
   echo "vous n'etes pas connecte";
   // Si inexistante ou nulle, on redirige vers le formulaire de login
-  header('Location: http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/securite/connexion.php');
+  header('Location: '/*ajouter l'adresse de votre site ici*/'/serre/projet_m1_struct/apli_web/interface_web/securite/connexion.php');
   exit();
 }else{
 
@@ -15,7 +15,7 @@ if(empty($_SESSION['login']))
   session_destroy();
   // Destruction du tableau de session
   unset($_SESSION);
-  header('Location: http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/securite/connexion.php');
+  header('Location: '/*ajouter l'adresse de votre site ici*/'/serre/projet_m1_struct/apli_web/interface_web/securite/connexion.php');
   exit();
 }
 

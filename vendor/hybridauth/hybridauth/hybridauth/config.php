@@ -11,7 +11,7 @@
 // ----------------------------------------------------------------------------------------
 
 return array(
-    "base_url" => "http://serregoarem.ddnsking.com/serre/vendor/hybridauth/hybridauth/hybridauth/",
+    "base_url" => ""/*ajouter l'adresse de votre site ici*/"/serre/vendor/hybridauth/hybridauth/hybridauth/",
     "providers" => array(
         // openid providers
         "OpenID" => array(
@@ -26,16 +26,16 @@ return array(
         ),
         "Google" => array(
             "enabled" => true,
-            "keys" => array("id" => "465233672387-jbdsr1eunamue0fq0pq1cl3db8l87o8i.apps.googleusercontent.com", "secret" => "73g-V1tsJSaoqSbn0Wd_FV_k"),
+            "keys" => array("id" => "", "secret" => ""),
         ),
         "Facebook" => array(
             "enabled" => true,
-            "keys" => array("id" => "446272929039156", "secret" => "0ec9951958695a404f7ea0b458ab5f83"),
+            "keys" => array("id" => "", "secret" => ""),
             "trustForwarded" => false,
         ),
         "Twitter" => array(
             "enabled" => true,
-            "keys" => array("key" => "37abLfW5JBtP5JIDswT134tSB", "secret" => "EfpiVpLxxsHAnX156VnE5OWZxl4vjLiJHLRt4ex0aaU54iPxE6"),
+            "keys" => array("key" => "", "secret" => ""),
             "includeEmail" => false,
         ),
         // windows live

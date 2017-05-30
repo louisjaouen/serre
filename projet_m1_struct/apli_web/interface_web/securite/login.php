@@ -23,7 +23,7 @@ if (isset($_POST['prenom'])&& isset($_POST['motdepasse'])) //Oublie d'un champ
   $req->closeCursor();
   $bdd=null;
   if(isset($_SESSION['login'])){
-    header('Location: http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/html/tableau.php');
+    header('Location: '/*ajouter l'adresse de votre site ici*/'/serre/projet_m1_struct/apli_web/interface_web/html/tableau.php');
     exit();
   }else{
     
@@ -50,7 +50,7 @@ if (isset($_POST['prenom'])&& isset($_POST['motdepasse'])) //Oublie d'un champ
           {
              //Création des variables de session 
             $_SESSION['login'] = $user_data->displayName;
-            header('Location: http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/html/tableau.php');
+            header('Location: '/*ajouter l'adresse de votre site ici*/'/serre/projet_m1_struct/apli_web/interface_web/html/tableau.php');
             exit();
           
           }
@@ -59,7 +59,7 @@ if (isset($_POST['prenom'])&& isset($_POST['motdepasse'])) //Oublie d'un champ
             // On enregistre le login en session
             $_SESSION['login'] = $user_data->displayName;
              /*Sinon on redirige le visiteur vers le formulaire d'inscription en récupérant au préalable les données qui nous intéressent en vue de pré-remplir les champs*/
-             header('Location: http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/html/tableau.php');
+             header('Location: '/*ajouter l'adresse de votre site ici*/'/serre/projet_m1_struct/apli_web/interface_web/html/tableau.php');
             exit();
           }
        }

@@ -8,7 +8,7 @@ if(empty($_SESSION['login']))
   // Si inexistante ou nulle, on redirige vers le formulaire de login
   
 }else{
-  header('Location: http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/html/tableau.php');
+  header('Location: '/*ajouter l'adresse de votre site ici*/'/serre/projet_m1_struct/apli_web/interface_web/html/tableau.php');
   exit();
 }
 if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION['nombre_de_valeur'])) 
@@ -58,8 +58,8 @@ if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION[
                         <div id="my-signin" href="index.html"></div>
                         <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true" href="index.html"></div>
                         <h6>connectez vous avec :</h6>
-                        <a href="http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/securite/login.php?provider=Google" title="Connexion Google">Google</a>
-                        <a href="http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/securite/login.php?provider=Twitter" title="Connexion Facebook">Twitter</a>
+                        <a href="/*ajouter l'adresse de votre site ici*/serre/projet_m1_struct/apli_web/interface_web/securite/login.php?provider=Google" title="Connexion Google">Google</a>
+                        <a href="'/*ajouter l'adresse de votre site ici*/'/serre/projet_m1_struct/apli_web/interface_web/securite/login.php?provider=Twitter" title="Connexion Facebook">Twitter</a>
                         <h2>ou</h2>
                         <form method="post" action="login.php" role="form">
                             <fieldset>

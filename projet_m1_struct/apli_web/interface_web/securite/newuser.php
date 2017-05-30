@@ -29,7 +29,7 @@ if (isset($_POST['nom']) && isset($_POST['prenom'])&& isset($_POST['email'])&& i
 	echo $message;
 	$req->closeCursor();
 	$bdd=null;
-	header('Location: http://serregoarem.ddnsking.com/serre/projet_m1_struct/apli_web/interface_web/securite/connexion.php');
+	header('Location: '/*ajouter l'adresse de votre site ici*/'/serre/projet_m1_struct/apli_web/interface_web/securite/connexion.php');
   	exit();
 }
 else //On check le mot de passe
