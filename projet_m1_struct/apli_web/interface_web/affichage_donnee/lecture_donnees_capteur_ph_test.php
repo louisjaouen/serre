@@ -17,7 +17,7 @@ if(empty($_SESSION['bassin']) || empty($_SESSION['capteur']) || empty($_SESSION[
 
  header('Content-Type: text/html; charset: UTF-8');
 try{
-        // Sous MAMP (Mac)
+        
         $bdd = new PDO('mysql:host=localhost;dbname=projet;charset=utf8', 'root', '**motdepasse**');
         }
 catch (Exception $e)
