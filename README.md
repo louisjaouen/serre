@@ -11,3 +11,11 @@ Il vous faudra aussi modifier le fichier config.php dans le dossier vendor/hybri
 
 En cas de problèmes n'hésitez pas à lire les docs de Bootstrap et de Hybridauth.
 
+Pour pouvoir simuler la serre, il vous faudra une beaglebone reliée également à internet. (Attention si réseau ISEN utiliser un partage de connexion, les ports sont fermés)
+
+Et lancer le script python simulateur_beaglebone.py, après y avoir également modifié les champs adresse, port et mot de passe de votre base de données.
+
+
+
+En cas de problèmes de compréhension vous pouvez nous contacter : louisjaouen@me.com
+			benoit.lau@isen-ouest.yncrea.fr
